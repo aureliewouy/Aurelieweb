@@ -1,0 +1,32 @@
+.tapeContainer {
+    background-color: yellow;
+    transform: rotate(3deg);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.tape {
+    display:  inline-block;
+    white-space: nowrap;
+    padding: 10px;
+    gap: 3px;
+    flex-wrap: nowrap;
+    animation: tickerAnimation 25s linear infinite;
+    animation-delay: 3s;
+}
+.tape p {
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 17px;
+    display: inline;
+}
+@keyframes tickerAnimation {
+    0% {
+        transform: translateX(100%);
+    }
+    
+    100% {
+        transform: translateX(-100%);
+    }
+}
