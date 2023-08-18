@@ -1,6 +1,6 @@
 .projetsection {
-    color :  #ebe2d0;
-    margin : 200px 50px;
+    color :  var(--eggshell);
+    margin :  50px;
 }
 .projetsection h2 {
     font-size: 100px;

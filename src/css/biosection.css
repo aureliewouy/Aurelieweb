@@ -13,11 +13,11 @@
 }
 .biosection > p {
 font-size: 40px;
-color: #ebe2d0;
+color: var(--eggshell);
 margin-bottom: 80px;
 }
 .wouyyan {
-    background-color: rgba(255,43,89);
+    background-color: var(--yellow);
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -27,6 +27,7 @@ margin-bottom: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    will-change:transform;
     animation: spin 12s linear infinite;
 }
 .wouyyan p {

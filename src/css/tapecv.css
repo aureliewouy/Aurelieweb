@@ -1,29 +1,44 @@
 .tapeContainer {
-    background-color: yellow;
-    transform: rotate(3deg);
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    /* background-color: var(--eggshell); */
+    /* width: 100%; */
     position: relative;
-    width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    
 }
 .tape {
-    display:  inline-block;
+    display:flex;
     white-space: nowrap;
-    padding: 10px;
-    gap: 3px;
-    flex-wrap: nowrap;
+    align-items: center;
+    will-change:transform;
     animation: tickerAnimation 25s linear infinite;
-    animation-delay: 3s;
+
 }
-.tape p {
-    font-weight: bolder;
-    text-transform: uppercase;
+/* .tape p {
     text-align: right;
-    font-size: 17px;
-    display: inline;
+    font-size: 35px;
+    font-family: arcade classic;
+    margin: 5px;
+} */
+.tape p {
+    text-align: right;
+    font-size: 55px;
+    font-size: bolder;
+    margin: 5px;
+    color: rgba(225,225,225,0.7)
+}
+.tape span {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.logo {
+    width: 50px;
+    height: 50px;
 }
 @keyframes tickerAnimation {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     
     100% {

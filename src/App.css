@@ -1,40 +1,56 @@
 .App {
   text-align: center;
-  background-color: #191926;
+  background-color: var(--purpledark);
   font-family: "Albert Sans";
 }
-
+@font-face {
+  font-family: 'fake receipt';
+  src: url('./fonts/fake_receipt.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'arcade classic';
+  src: url('./fonts/ARCADECLASSIC.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+:root {
+  --sinopia :#C73E1D;
+  --rose: #D81E5B;
+  --eggshell :#F6F8FF;
+  --purpledark:#161925;
+  --yellow:#F6F740;
+}
+.backgroundAnimation {
+  width: 100%;
+  height: 100%;
+  background-color: var(--purpledark);
+  position: absolute;
+  top:0;
+  z-index: 5;
+}
+.ease-in-out {
+  will-change:transform;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .5s;
+  transition-property: opacity;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+@keyframes opacity {
+  0%, 75% { opacity:  0; }
+
+  100% { opacity:  1; }
 }

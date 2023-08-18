@@ -1,23 +1,35 @@
 
 import {ReactComponent as Logo} from '../medias/logo-web.svg'
 import '../css/header.css';
+import '../App.css';
 function HeaderNav() {
 
     return (
-        <nav className='headerNav'>
+        <nav className='headerNav ease-in-out'>
+            <div>
             <Logo  className='logo'/>
-            <div>
-                <p>Github</p>
-                <p>Linkedin</p>
             </div>
-            <div>
-                <p>Light mode</p>
-            </div>
-            <div>
-                <p>Bio</p>
-                <p>Music</p>
-                <p>Series</p>
-                <p>Games</p>
+            <div className='clickable'>
+                <div >
+                <a href="https://github.com/aureliewouy"  target='_blank' className="cutlink" data-content="Github">
+                <span className="cutlink-inner">Github</span>
+                </a>
+                    <p>•</p>
+                    <a href="https://www.linkedin.com/in/aurelie-cedia-060248182"  target='_blank' className="cutlink" data-content="Linkedin">
+                <span className="cutlink-inner">Linkedin</span>
+                </a>
+                </div>
+                <div>
+                <a href="#"  target='_blank' className="glow-on-hover">
+                <span>Light mode</span>
+                </a>
+                </div>
+                <div>
+                    <a>Bio</a>
+                    <a>Music</a>
+                    <a>Series</a>
+                    <a>Games</a>
+                </div>
             </div>
         </nav>
     );
