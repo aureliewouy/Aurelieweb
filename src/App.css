@@ -1,8 +1,14 @@
+body {
+  background-color: var(--purpledark);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
 .App {
   text-align: center;
-  background-color: var(--purpledark);
   font-family: "Albert Sans";
 }
+
 @font-face {
   font-family: 'fake receipt';
   src: url('./fonts/fake_receipt.otf') format('opentype');
@@ -15,6 +21,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'kabel';
+  src: url('./fonts/Kabel_Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -30,7 +43,9 @@
   --rose: #D81E5B;
   --eggshell :#F6F8FF;
   --purpledark:#161925;
-  --yellow:#F6F740;
+  /* --yellow:#FF1654; */
+  /* --yellow:#2a9d8f; */
+  --yellow:#f7e840f7;
 }
 .backgroundAnimation {
   width: 100%;
@@ -48,9 +63,82 @@
   animation-name: opacity;
   animation-duration: 2s;
   animation-iteration-count: 1;
+  margin: auto;
+  /* position: absolute;
+  top: -9px;
+  left: -13px; */
 }
 @keyframes opacity {
-  0%, 75% { opacity:  0; }
+  0%{ opacity:  0; }
 
   100% { opacity:  1; }
+}
+.slide-in {
+  will-change:transform;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .5s;
+  transition-property: transform;
+  animation-name: slidein;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+@keyframes slidein {
+  0% { transform:  translateY(100%); 
+  opacity: 0;
+  }
+
+  100% { transform:  translateY(0);   opacity: 1; }
+}
+.slide-in-top {
+  will-change:transform;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .5s;
+  transition-property: transform;
+  animation-name: slideintop;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes slideintop {
+  0%{ transform:  translateY(-100%); }
+
+  100% { transform:  translateY(0);  }
+}
+.active, .activeLeft {
+  opacity: 0;
+}
+.slide-in-right {
+  will-change:transform;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .5s;
+  transition-property: transform;
+  animation-name: slideinright;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  opacity: 1;
+}
+
+@keyframes slideinright {
+  0% { transform:  translateX(50%); 
+  opacity: 0;
+  }
+
+  100% { transform:  translateX(0);   opacity: 1; }
+}
+.slide-in-left {
+  will-change:transform;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .5s;
+  transition-property: transform;
+  animation-name: slideinleft;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  opacity: 1;
+}
+
+@keyframes slideinleft {
+  0% { transform:  translateX(-50%); 
+  opacity: 0;
+  }
+
+  100% { transform:  translateX(0);   opacity: 1; }
 }

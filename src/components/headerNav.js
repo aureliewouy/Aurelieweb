@@ -5,7 +5,7 @@ import '../App.css';
 function HeaderNav() {
 
     return (
-        <nav className='headerNav ease-in-out'>
+        <nav className='slide-in-top headerNav'>
             <div>
             <Logo  className='logo'/>
             </div>

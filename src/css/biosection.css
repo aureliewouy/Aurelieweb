@@ -1,5 +1,4 @@
 .biosection {
-
     width: 60vw;
     margin: auto;
 }
@@ -8,13 +7,15 @@
 }
 .biophoto {
     border-radius: 25px;
-    width: 60vw;
-    transform: rotate(-2deg) translateY(-90px) ;
+    width: 70vw;
+    transform: rotate(-4deg) translateY(-135px) ;
 }
 .biosection > p {
-font-size: 40px;
+font-size: 35px;
 color: var(--eggshell);
 margin-bottom: 80px;
+margin-top: -50px;
+line-height: 1.1;
 }
 .wouyyan {
     background-color: var(--yellow);
@@ -33,6 +34,7 @@ margin-bottom: 80px;
 .wouyyan p {
     font-size: 40px;
     font-weight: bolder;
+
 }
 @keyframes spin {
     100% {

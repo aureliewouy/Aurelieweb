@@ -22,6 +22,37 @@ function App() {
     }, 2000);
     
   }, []);
+  
+function isInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  return (
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom >= 0
+  );
+}
+
+function handleScroll() {
+  var slideInRightElements = document.querySelectorAll('.active');
+  var slideInLeftElements = document.querySelectorAll('.activeLeft');
+
+  slideInRightElements.forEach(function(element) {
+    if (isInViewport(element)) {
+      element.classList.add('slide-in-right');
+    }
+  });
+  slideInLeftElements.forEach(function(element) {
+    if (isInViewport(element)) {
+      element.classList.add('slide-in-left');
+    }
+  });
+}
+
+window.addEventListener('scroll', handleScroll);
+handleScroll();
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
   return (
     <div className={`App`}>
       <header>
@@ -31,11 +62,11 @@ function App() {
     
       <BioSection/>
       <ProjetSection/>
-      <TapeCV/>
+      {/* <TapeCV/> */}
       <ContactSection/>
       <Footer/>
       {/* <div className={`${background&& "backgroundAnimation"}`}></div> */}
-    </div>
+    </div>  
     
   );
 }

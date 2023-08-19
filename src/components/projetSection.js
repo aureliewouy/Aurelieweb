@@ -1,10 +1,9 @@
 import '../css/projetsection.css';
 function ProjetSection() {
     return (
-        <div className="projetsection">
+        <div className="projetsection active" style={{marginBottom:'200px', opacity:0}}>
             <h2>Mes projets</h2>
 
-                <p>VOici des projets ? a developper plus tard :))) </p>
         </div>
     );
 }

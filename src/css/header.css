@@ -1,4 +1,6 @@
 .headerNav{
+  top: 0;
+    position: sticky;
     display: flex;
     justify-content: space-between;
     color:var(--eggshell);
@@ -25,22 +27,26 @@
     width: 50px;
 }
 h1 {
-font-size :8vw;
+font-size :11vw;
     letter-spacing: -5px;
-    text-shadow: -2px 0 var(--yellow), 0 2px var(--yellow), 2px 0 var(--yellow), 0 -2px var(--yellow);
     color:var(--yellow);
     font-weight: bolder;
     line-height: 1;
     position: relative;
+    font-family: kabel;
+    margin-top: 2rem;
 }
-/*transition-timing-function: cubic-bezier(.4,0,.2,1);*/
+.spanTitle {
+  position: relative;
+}
+
 .aureWeb {
     position: absolute;
     bottom: 20px;
-    left: 40px;
-    width: 90%;
+    left: 0px;
     will-change:transform;
     animation: float 5s ease-in-out infinite;
+    width: 100%;
 }
 @keyframes float {
     0%, 100% {
