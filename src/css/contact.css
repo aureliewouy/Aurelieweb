@@ -1,9 +1,10 @@
 .contactsection h2 span{
-    color: #F3FFBD;
+    color: var(--rose);
     font-size: 150px;
     margin-top: 0;
     user-select: none;
     z-index: -1;
+    font-family: kabel;
 }
 
 .card {

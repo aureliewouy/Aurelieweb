@@ -8,7 +8,17 @@ body::-webkit-scrollbar {
   text-align: center;
   font-family: "Albert Sans";
 }
-
+.day-mode {
+color:var(--matteblack);
+background-color: var(--cornsilk);
+}
+.day-mode a, .day-mode p {
+  color:var(--matteblack) !important
+}
+.night-mode{
+color:white;
+background-color: var(--purpledark);
+}
 @font-face {
   font-family: 'fake receipt';
   src: url('./fonts/fake_receipt.otf') format('opentype');
@@ -39,13 +49,16 @@ body::-webkit-scrollbar {
 }
 
 :root {
-  --sinopia :#C73E1D;
-  --rose: #D81E5B;
+  --rose: #fa2a58;
   --eggshell :#F6F8FF;
-  --purpledark:#161925;
+  --purpledark:#191926;
+  /*LIGHT MODE*/
+  --cornsilk:#FAF3D3;
+  --matteblack:	#353935;
   /* --yellow:#FF1654; */
   /* --yellow:#2a9d8f; */
-  --yellow:#f7e840f7;
+  /* --yellow:#f7e840f7; */
+
 }
 .backgroundAnimation {
   width: 100%;
@@ -112,7 +125,7 @@ body::-webkit-scrollbar {
   transition-duration: .5s;
   transition-property: transform;
   animation-name: slideinright;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   opacity: 1;
 }
@@ -130,7 +143,7 @@ body::-webkit-scrollbar {
   transition-duration: .5s;
   transition-property: transform;
   animation-name: slideinleft;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   opacity: 1;
 }

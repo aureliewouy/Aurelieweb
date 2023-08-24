@@ -16,7 +16,7 @@
     width: 90%;
     justify-content: space-between;
 }
-.clickable a {
+.clickable a, .clickable button, .lastpart a{
     font-family: arcade classic;
     font-size: 28px;
     text-decoration: none;
@@ -24,12 +24,12 @@
 }
 
 .logo {
-    width: 50px;
+    width: 65px;
 }
 h1 {
 font-size :11vw;
     letter-spacing: -5px;
-    color:var(--yellow);
+    color:var(--rose);
     font-weight: bolder;
     line-height: 1;
     position: relative;

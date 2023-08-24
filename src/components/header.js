@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import '../css/header.css';
 import '../App.css';
-import AureTop from "../medias/h1-b.svg";
-import AureBottom from "../medias/h1-bottom.svg";
 import Aure from "../medias/transparent.svg"
-function Header() {
+import AureDark from "../medias/transparentDark.svg"
+import { connect } from 'react-redux';
+import { toggleTheme } from '../redux/themeaction';
+const Header = ({ isNightMode, toggleTheme }) => {
   const [showText, setShowText] = useState(false);
   const [heartbeat, setheartbeat] = useState(false);
   const [width, setWidth] = useState(false);
@@ -41,15 +42,25 @@ return (
       <div className="" style={{zIndex:10, position:"relative"}}>
         <h1  >
             <span ref={h1Ref} className='spanTitle'>AURÉLIE CEDIA
-            {/* <div className='ease-in-out'>
-              <img style={{width:width +"px"}}   className="aureWeb" src={AureTop}/></div>  */}
               </span><br/>
-            <span ref={h1RefB}>DÉVELOPPEUSE WEB
-             {/* <div className='ease-in-out'><img className="aureWeb" style={{width:widthB +"px"}} src={AureBottom}/></div> */}           
+            <span ref={h1RefB}>DÉVELOPPEUSE WEB      
              </span>
-             <div className='ease-in-out'  style={{width:width +"px"}} ><img className="aureWeb" src={Aure}/></div> 
+             <div className='ease-in-out'  style={{width:width +"px"}} >
+             {isNightMode? 
+              <img className="aureWeb" src={Aure} alt='Aurélie CEDIA transparent'/>:
+              <img className="aureWeb" src={AureDark} alt='Aurélie CEDIA transparent'/>}
+              
+              </div> 
         </h1>
       </div>
     );
 }
-export default Header
+const mapStateToProps = (state) => ({
+  isNightMode: state.isNightMode,
+});
+
+const mapDispatchToProps = {
+  toggleTheme,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

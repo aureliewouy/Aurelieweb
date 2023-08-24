@@ -32,10 +32,7 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-.logo {
-    width: 50px;
-    height: 50px;
-}
+
 @keyframes tickerAnimation {
     0% {
         transform: translateX(0);

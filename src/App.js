@@ -7,21 +7,25 @@ import TapeCV from './components/tapecv';
 import ProjetSection from './components/projetSection';
 import ContactSection from './components/contactSection';
 import Footer from './components/footer';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
 
-function App() {
-  const [background, setbackground] = useState(false);
 
-  useEffect(() => {
-    // Animation sequence
-    setTimeout(() => {
-      setbackground(true);
-    });
-    setTimeout(() => {
-      setbackground(false);
-    }, 2000);
+class App extends React.Component {
+  render() {
+  const { isNightMode } = this.props;
+
+  // const [background, setbackground] = useState(false);
+  // useEffect(() => {
+  //   // Animation sequence
+  //   setTimeout(() => {
+  //     setbackground(true);
+  //   });
+  //   setTimeout(() => {
+  //     setbackground(false);
+  //   }, 2000);
     
-  }, []);
+  // }, []);
   
 function isInViewport(element) {
   var rect = element.getBoundingClientRect();
@@ -52,9 +56,12 @@ handleScroll();
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
-
+console.log(isNightMode)
   return (
-    <div className={`App`}>
+    // <div className={`App`}>
+  <div className={`App ${isNightMode ? 'night-mode' : 'day-mode'}`}>
+      <style>
+      </style>
       <header>
       <HeaderNav/>
       </header>
@@ -67,8 +74,16 @@ window.onbeforeunload = function () {
       <Footer/>
       {/* <div className={`${background&& "backgroundAnimation"}`}></div> */}
     </div>  
-    
-  );
+  )
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  isNightMode: state.isNightMode,
+});
+
+export default connect(mapStateToProps)(App);
+
+
+
+

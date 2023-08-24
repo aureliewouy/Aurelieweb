@@ -1,15 +1,19 @@
 
 import {ReactComponent as Logo} from '../medias/logo-web.svg'
+import {ReactComponent as LogoDark} from '../medias/logo-dark.svg'
 import '../css/header.css';
 import '../App.css';
-function HeaderNav() {
+import { connect } from 'react-redux';
+import { toggleTheme } from '../redux/themeaction';
+
+const HeaderNav = ({ isNightMode, toggleTheme }) => {
 
     return (
         <nav className='slide-in-top headerNav'>
             <div>
-            <Logo  className='logo'/>
+                {isNightMode?  <Logo  className='logo'/> :   <LogoDark  className='logo'/>}
             </div>
-            <div className='clickable'>
+            <div className={`clickable ${isNightMode ? 'night-mode' : 'day-mode'}`}>
                 <div >
                 <a href="https://github.com/aureliewouy"  target='_blank' className="cutlink" data-content="Github">
                 <span className="cutlink-inner">Github</span>
@@ -19,19 +23,25 @@ function HeaderNav() {
                 <span className="cutlink-inner">Linkedin</span>
                 </a>
                 </div>
-                <div>
-                <a href="#"  target='_blank' className="glow-on-hover">
-                <span>Light mode</span>
-                </a>
+                <button  className="glow-on-hover"  onClick={toggleTheme}>
+                    {isNightMode ? 'Light mode' : ' Dark mode'}
+               </button>
+                <div className='lastpart'>
+                    <a href='#'>Bio</a>
+                    <a href='#'>Music</a>
+                    <a href='#'>Series</a>
+                    <a href='#'>Games</a>
                 </div>
-                <div>
-                    <a>Bio</a>
-                    <a>Music</a>
-                    <a>Series</a>
-                    <a>Games</a>
                 </div>
-            </div>
         </nav>
     );
 }
-export default HeaderNav
+const mapStateToProps = (state) => ({
+    isNightMode: state.isNightMode,
+  });
+  
+  const mapDispatchToProps = {
+    toggleTheme,
+  };
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(HeaderNav);
