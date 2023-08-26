@@ -32,7 +32,7 @@ const HeaderNav = ({ isNightMode, toggleTheme }) => {
                     <a href='#'>Series</a>
                     <a href='#'>Games</a>
                 </div>
-                </div>
+            </div>
         </nav>
     );
 }

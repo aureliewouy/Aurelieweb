@@ -43,11 +43,13 @@ font-size :11vw;
 .aureWeb {
     position: absolute;
     bottom: 20px;
-    left: 0px;
+    left: 0;
     will-change:transform;
     animation: float 5s ease-in-out infinite;
     width: 100%;
+    user-select: none;
 }
+
 @keyframes float {
     0%, 100% {
         transform: translateY(.5%);
@@ -204,3 +206,11 @@ font-size :11vw;
       transform: scale(1);
     }
   }
+@media (max-width: 900px) {
+.clickable div{
+  display: none;
+}
+.aureWeb{
+  display: none;
+}
+}

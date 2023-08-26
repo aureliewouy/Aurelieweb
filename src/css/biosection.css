@@ -10,6 +10,7 @@
     width: 70vw;
     transform: rotate(-4deg) translateY(-135px) ;
 }
+
 .biosection > p {
     font-weight: bold;
 font-size: 35px;
@@ -18,8 +19,20 @@ margin-bottom: 80px;
 margin-top: -50px;
 line-height: 1.1;
 }
+::selection {
+    color: var(--rose) /* Changez la couleur du texte sélectionné à la couleur de votre choix */
+}
 @keyframes spin {
     100% {
         transform: rotate(1turn);
     }
 }
+@media (max-width: 900px) {
+    .biophoto{
+        transform: rotate(-4deg) translateY(-45px) ;
+    }
+    .biosection > p {
+        margin-top: 0;
+        font-size: 25px;
+    }
+    }

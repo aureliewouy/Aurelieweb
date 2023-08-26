@@ -40,15 +40,15 @@ const Header = ({ isNightMode, toggleTheme }) => {
 
 return (
       <div className="" style={{zIndex:10, position:"relative"}}>
-        <h1  >
+        <h1 className='selectDisable' >
             <span ref={h1Ref} className='spanTitle'>AURÉLIE CEDIA
               </span><br/>
             <span ref={h1RefB}>DÉVELOPPEUSE WEB      
              </span>
              <div className='ease-in-out'  style={{width:width +"px"}} >
              {isNightMode? 
-              <img className="aureWeb" src={Aure} alt='Aurélie CEDIA transparent'/>:
-              <img className="aureWeb" src={AureDark} alt='Aurélie CEDIA transparent'/>}
+              <img className="aureWeb selectDisable" src={Aure} alt='Aurélie CEDIA transparent'/>:
+              <img className="aureWeb selectDisable" src={AureDark} alt='Aurélie CEDIA transparent'/>}
               
               </div> 
         </h1>
