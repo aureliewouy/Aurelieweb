@@ -13,7 +13,7 @@
     background-color: var(--yellow);
 }
 .projetsection h2 {
-    font-size: 100px;
+    font-size: 8vw;
     display: block;
     width: 100%;
 }
@@ -38,7 +38,7 @@ input[type=radio] {
     cursor: pointer;
   }
   
-  .container {
+  .carousselContainer {
     width: 100%;
     max-width: 850px;
     max-height: 600px;
@@ -176,3 +176,10 @@ label > img {
   #item-4:checked ~ .player #test {
     transform: translateY(-120px); /* Ajout de la règle pour #item-4 */
   }
+
+  @media (max-width: 900px) {
+    .cardProjet {
+        width: 280px;
+        height: 120px;
+      }
+    }

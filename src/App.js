@@ -9,6 +9,7 @@ import ContactSection from './components/contactSection';
 import Footer from './components/footer';
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import BtnCv from './components/btnCv';
 
 
 class App extends React.Component {
@@ -69,6 +70,7 @@ console.log(isNightMode)
     
       <BioSection/>
       <ProjetSection/>
+      <BtnCv/>
       {/* <TapeCV/> */}
       <ContactSection/>
       <Footer/>

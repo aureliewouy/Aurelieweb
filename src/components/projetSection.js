@@ -11,10 +11,10 @@ function ProjetSection() {
       setIsBlue(!isBlue);
     };
     return (
-        <div className="projetsection" style={{marginBottom:'200px'}}>
-            <h2>Mes projets</h2>
+        <div className="projetsection active" style={{marginBottom:'200px'}}>
+            <h2>Mes réalisations</h2>
             <div  className="caroussel" >
-            <div className="container">
+            <div className="carousselContainer">
     <input type="radio" name="slider" id="item-1" defaultChecked={true} onChange={handleInputChange} />
     <input type="radio" name="slider" id="item-2"  onChange={handleInputChange}/>
     <input type="radio" name="slider" id="item-3"  onChange={handleInputChange}/>
