@@ -27,10 +27,10 @@ const HeaderNav = ({ isNightMode, toggleTheme }) => {
                     {isNightMode ? 'Light mode' : ' Dark mode'}
                </button>
                 <div className='lastpart'>
-                    <a href='#'>Bio</a>
-                    <a href='#'>Music</a>
+                    <a href='#test'>Bio</a>
+                    {/* <a href='#'>Music</a>
                     <a href='#'>Series</a>
-                    <a href='#'>Games</a>
+                    <a href='#'>Games</a> */}
                 </div>
             </div>
         </nav>
