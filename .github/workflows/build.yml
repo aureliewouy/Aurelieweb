@@ -1,0 +1,25 @@
+name: Build on Push
+
+on:
+  push:
+    branches:
+      - main # ou la branche vers laquelle vous souhaitez déclencher le workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout le code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14 # Remplacez par la version de Node.js requise par votre projet
+
+    - name: Installer les dépendances
+      run: npm install
+
+    - name: Construire le projet
+      run: npm run build # Remplacez par la commande de build de votre projet

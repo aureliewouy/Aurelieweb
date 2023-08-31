@@ -34,7 +34,7 @@ function CardGrab(props) {
         })
       )
     
-      const [{ wheelY }, wheelApi] = useSpring(() => ({ wheelY: 0 }))
+      const [wheelApi] = useSpring(() => ({ wheelY: 0 }))
     
       useGesture(
         {

@@ -15,11 +15,11 @@ const HeaderNav = ({ isNightMode, toggleTheme }) => {
             </div>
             <div className={`clickable ${isNightMode ? 'night-mode' : 'day-mode'}`}>
                 <div >
-                <a href="https://github.com/aureliewouy"  target='_blank' className="cutlink" data-content="Github">
+                <a href="https://github.com/aureliewouy" className="cutlink" data-content="Github">
                 <span className="cutlink-inner">Github</span>
                 </a>
                     <p>•</p>
-                    <a href="https://www.linkedin.com/in/aurelie-cedia-060248182"  target='_blank' className="cutlink" data-content="Linkedin">
+                    <a href="https://www.linkedin.com/in/aurelie-cedia-060248182" className="cutlink" data-content="Linkedin">
                 <span className="cutlink-inner">Linkedin</span>
                 </a>
                 </div>

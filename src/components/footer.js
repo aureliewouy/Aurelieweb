@@ -1,5 +1,4 @@
 import '../css/footer.css';
-import AureWeb from "../medias/webaure.svg";
 function Footer() {
 
     return (
