@@ -8,7 +8,10 @@
 .biophoto {
     border-radius: 25px;
     width: 70vw;
+    will-change: transform;
     transform: rotate(-4deg) translateY(-135px) ;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .biosection > p {
@@ -22,17 +25,61 @@ line-height: 1.1;
 ::selection {
     color: var(--rose) /* Changez la couleur du texte sélectionné à la couleur de votre choix */
 }
-@keyframes spin {
-    100% {
-        transform: rotate(1turn);
-    }
+/* .photocontainer{
+    overflow: hidden;
+} */
+.photohide{ 
+    position: absolute;
+    width: 120%;
+    height: 40%;
+    top:-20%;
+    right: -1%;
+    background-color: var(--purpledark);
+    /* border-radius: 25px; */
+    will-change: transform;
+    transform: rotate(-4deg) translateX(-120%);
+    animation-name: slideleft;
+    animation-duration: 4.8s;
+    animation-iteration-count: 1 ;
+    animation-timing-function: cubic-bezier(.27,.31,.41,1.4);
 }
+
+.photohide:nth-of-type(2){
+    animation-duration: 5s;
+    top:20%
+}
+.photohide:nth-of-type(3){
+    animation-duration: 5.12s;
+    
+    top:60%
+}
+
+@keyframes slideleft {
+    0%, 75%{
+        transform:  translateX(0)  rotate(-4deg) translateZ(0);
+    }
+    100% {
+        transform:  translateX(-100%)  rotate(-4deg) translateZ(5%);
+    }
+  }
+
 @media (max-width: 900px) {
     .biophoto{
-        transform: rotate(-4deg) translateY(-45px) ;
+        transform: rotate(-4deg) translateY(-33px) ;
+        border-radius: 15px;
+        width: 100%;
+    }
+    .biosection{
+        width: 100%;
+        /* overflow: hidden; */
     }
     .biosection > p {
+       
         margin-top: 0;
+        width: 80vw;
+        margin: auto;
         font-size: 18px;
+        opacity: 1;
+        animation: slidein 4s ease 1;
     }
     }

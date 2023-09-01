@@ -179,7 +179,29 @@ label > img {
 
   @media (max-width: 900px) {
     .cardProjet {
-        width: 280px;
+        width: 240px;
         height: 120px;
+        border-radius: 0;
       }
+      img{
+        border-radius: 0;
+      }
+        
+  #item-1:checked ~ .cards #projet-4,
+  #item-2:checked ~ .cards #projet-1,
+  #item-3:checked ~ .cards #projet-2,
+  #item-4:checked ~ .cards #projet-3 {
+    transform: translatex(-40%) scale(0.5);
+    opacity: 0.4;
+    z-index: 0;
+  }
+  
+  #item-1:checked ~ .cards #projet-2,
+  #item-2:checked ~ .cards #projet-3,
+  #item-3:checked ~ .cards #projet-4,
+  #item-4:checked ~ .cards #projet-1 {
+    transform: translatex(40%) scale(0.5);
+    opacity: 0.4;
+    z-index: 0;
+  }
     }
