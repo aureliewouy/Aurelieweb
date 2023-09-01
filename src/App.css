@@ -19,26 +19,26 @@ height: 20.1vh;
 right: 0;
 position: absolute;
 animation-name: width;
-animation-duration: 1.5s;
+animation-duration: 2.5s;
 animation-iteration-count: 1;
 animation-timing-function:ease-in-out ; 
 will-change: transform;
 }
 .nightreveal:nth-child(2){
   top: 20vh;
-  animation-duration: 1.8s;
+  animation-duration: 2.8s;
 }
  .nightreveal:nth-child(3){
   top: 40vh;
-  animation-duration: 2.1s;
+  animation-duration: 3.1s;
 }
 .nightreveal:nth-child(4){
   top: 60vh;
-  animation-duration: 2.5s;
+  animation-duration: 3.5s;
 }
 .nightreveal:nth-child(5){
   top: 80vh;
-  animation-duration: 2.8s;
+  animation-duration: 3.8s;
 }
 .disappeard{
   display: none;
@@ -56,7 +56,7 @@ will-change: transform;
   }
 }
 @keyframes width {
-  0%{ 
+  0%, 50%{ 
     width: 100%;
   }
   100%{

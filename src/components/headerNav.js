@@ -28,7 +28,7 @@ const HeaderNav = ({ isNightMode, toggleTheme }) => {
                </button>
                 <div className='lastpart'>
                     <a href='#test'>Bio</a>
-                    <a href='#test'>Music</a>
+                    <a href='#test'>Cv</a>
                     <a href='#test'>Series</a>
                     <a href='#test'>Games</a>
                 </div>

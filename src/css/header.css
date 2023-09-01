@@ -1,10 +1,11 @@
 .headerNav{
   top: 0;
-    position: sticky;
     display: flex;
     justify-content: space-between;
     color:var(--eggshell);
     padding: 20px 50px;
+    z-index: 5;
+    position: sticky;
 }
 .headerNav div {
     display: flex;
@@ -26,8 +27,38 @@
 .logo {
     width: 65px;
 }
+.h1container{
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+.hideh1{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cornsilk);
+  animation-name: appearbg;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-out ;
+  transform: translateY(110%);
+
+}
+@keyframes appearbg {
+  0% {
+    transform: translateY(42%);
+
+  }
+  100% {
+
+    transform: translateY(110%);
+  }
+}
 h1 {
-font-size :11vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size :11vw;
     letter-spacing: -5px;
     color:var(--rose);
     font-weight: bolder;
@@ -35,6 +66,18 @@ font-size :11vw;
     position: relative;
     font-family: kabel;
     margin-top: 2rem;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function:ease-out;
+}
+@keyframes appear {
+  0% {
+      transform: translateY(50%);
+  }
+  
+  100% {
+      transform: translateY(0%);
+  }
 }
 .spanTitle {
   position: relative;
@@ -47,7 +90,6 @@ font-size :11vw;
     bottom: 20px;
     left: 5vw;
     height: 100%;
-    /* overflow:visible; */
     will-change:transform;
     animation: float 5s ease-in-out infinite;
     width:90vw;
@@ -65,30 +107,33 @@ font-size :11vw;
 }
 .aurelieTop{
   width: 68vw;
-  height:  10em;
+  height:  100%;
   position: absolute;
-  top: -0.6vw;
+  top: -8.6vw;
   left: 16vw;
   background-size: contain; /* Redimensionne l'image pour qu'elle couvre toute la div */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
   background-position: center; /* Centre l'image dans la div */
   background-image: url('../medias/transparent.svg');
   will-change:transform;
-  animation: float 5s ease-in-out infinite;
+  animation: wait 3s ease-in 1, float 5s ease-in-out infinite;
 }
 .aurelieBottom{
   width: 90.5vw;
   height: 100%;
   position: absolute;
-  bottom: -4.7vw;
+  bottom: -1.7vw;
   left: 5.4vw;
   background-size: contain; /* Redimensionne l'image pour qu'elle couvre toute la div */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
   background-position: center; /* Centre l'image dans la div */
   background-image: url('../medias/transparent.svg');
   will-change:transform;
-  animation: float 5s ease-in-out infinite;
+  animation: wait 3s ease-in 1, float 5s ease-in-out infinite; 
+  opacity: 1;
+  /* float 5s ease-in-out infinite ; */
 }
+
 @keyframes float {
     0%, 100% {
         transform: translateY(.5%);
@@ -96,6 +141,15 @@ font-size :11vw;
     
     50% {
         transform: translateY(-1%);
+    }
+}
+@keyframes wait {
+    0%, 90% {
+        opacity: 0;
+    }
+    
+    100% {
+      opacity:1;
     }
 }
 

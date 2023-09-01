@@ -38,6 +38,9 @@ const Header = ({ isNightMode, toggleTheme }) => {
 
 return (
       <div style={{position:"relative"}}>
+        <div className='h1container'>
+
+  
         <h1 className='selectDisable' >
             <span className='spanTitle'>AURÉLIE CEDIA
               </span><br/>
@@ -50,6 +53,8 @@ return (
               
               </div>  */}
         </h1>
+        <div className='hideh1'></div>
+        </div>
         <div className='aurelieTop'  style={{backgroundImage: `url(${AureTop})`}}>       </div> 
              <div className='aurelieBottom'  style={{backgroundImage: `url(${AureBottom})`}}></div>
       </div>

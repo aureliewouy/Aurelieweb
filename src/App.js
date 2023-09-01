@@ -19,7 +19,7 @@ function App({ isNightMode }) {
     // Attacher l'événement scroll après un délai de 2 secondes
     const scrollTimeout = setTimeout(() => {
       window.removeEventListener('scroll', scrollHandler);
-    }, 2800);
+    }, 3800);
 
     // Nettoyer l'événement lorsque le composant est démonté
     return () => {
