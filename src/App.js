@@ -6,13 +6,27 @@ import BioSection from './components/bioSection';
 import ProjetSection from './components/projetSection';
 import ContactSection from './components/contactSection';
 import Footer from './components/footer';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 
-class App extends React.Component {
-  render() {
-  const { isNightMode } = this.props;
+function App({ isNightMode }) {
+  useEffect(() => {
+    const scrollHandler = () => {
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener('scroll', scrollHandler);
+    // Attacher l'événement scroll après un délai de 2 secondes
+    const scrollTimeout = setTimeout(() => {
+      window.removeEventListener('scroll', scrollHandler);
+    }, 2800);
+
+    // Nettoyer l'événement lorsque le composant est démonté
+    return () => {
+      clearTimeout(scrollTimeout);
+      window.removeEventListener('scroll', scrollHandler);
+    };
+  }, []);
   
 function isInViewport(element) {
   var rect = element.getBoundingClientRect();
@@ -45,8 +59,13 @@ window.onbeforeunload = function () {
 }
   return (
   <div className={`App ${isNightMode ? 'night-mode' : 'day-mode'}`}>
-      <style>
-      </style>
+<div className='nightrevealContainer'>
+      <div className='nightreveal'></div>
+      <div className='nightreveal'></div>
+      <div className='nightreveal'></div>
+      <div className='nightreveal'></div>
+      <div className='nightreveal'></div>
+    </div>
       <header>
       <HeaderNav/>
       </header>
@@ -59,7 +78,6 @@ window.onbeforeunload = function () {
     </div>  
   )
   }
-}
 
 const mapStateToProps = (state) => ({
   isNightMode: state.isNightMode,

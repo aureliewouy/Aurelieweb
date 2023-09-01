@@ -8,11 +8,66 @@ body::-webkit-scrollbar {
   text-align: center;
   font-family: "Albert Sans";
 }
+.nightrevealContainer{
+  width: 100%;
+  height: 100%;
+}
+.nightreveal{
+background-color: var(--cornsilk);
+width: 0%;
+height: 20.1vh;
+right: 0;
+position: absolute;
+animation-name: width;
+animation-duration: 1.5s;
+animation-iteration-count: 1;
+animation-timing-function:ease-in-out ; 
+will-change: transform;
+}
+.nightreveal:nth-child(2){
+  top: 20vh;
+  animation-duration: 1.8s;
+}
+ .nightreveal:nth-child(3){
+  top: 40vh;
+  animation-duration: 2.1s;
+}
+.nightreveal:nth-child(4){
+  top: 60vh;
+  animation-duration: 2.5s;
+}
+.nightreveal:nth-child(5){
+  top: 80vh;
+  animation-duration: 2.8s;
+}
+.disappeard{
+  display: none;
+}
+.appear{
+  display: block;
+}
+
+@keyframes changecolor {
+  0%, 50%{ 
+    background-color: var(--cornsilk);
+  }
+  100% { 
+    background-color: var(--purpledark);
+  }
+}
+@keyframes width {
+  0%{ 
+    width: 100%;
+  }
+  100%{
+    width: 0%;
+  }
+}
 .day-mode {
 color:var(--matteblack);
 background-color: var(--cornsilk);
 }
-.day-mode a, .day-mode p {
+.day-mode a, .day-mode p ,.day-mode-no-bg a, .day-mode-no-bg p{
   color:var(--matteblack) !important
 }
 .night-mode{
@@ -92,11 +147,11 @@ background-color: var(--purpledark);
   transition-duration: .5s;
   transition-property: transform;
   animation-name: slidein;
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-iteration-count: 1;
 }
 @keyframes slidein {
-  0% { transform:  translateY(100%); 
+  0% , 75%{ transform:  translateY(100%); 
   opacity: 0;
   }
 
@@ -108,11 +163,11 @@ background-color: var(--purpledark);
   transition-duration: .5s;
   transition-property: transform;
   animation-name: slideintop;
-  animation-duration: 1s;
+  animation-duration: 4s;
   animation-iteration-count: 1;
 }
 @keyframes slideintop {
-  0%{ transform:  translateY(-100%); }
+  0%, 75%{ transform:  translateY(-100%); }
 
   100% { transform:  translateY(0);  }
 }

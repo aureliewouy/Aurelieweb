@@ -65,9 +65,9 @@ font-size :11vw;
 }
 .aurelieTop{
   width: 68vw;
-  height: 100%;
+  height:  10em;
   position: absolute;
-  top: -6.6vw;
+  top: -0.6vw;
   left: 16vw;
   background-size: contain; /* Redimensionne l'image pour qu'elle couvre toute la div */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */

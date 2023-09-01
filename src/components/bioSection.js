@@ -1,4 +1,4 @@
-import AureWeb from "../medias/gameboyaure.png";
+import AureWeb from "../medias/aureliebeige.png";
 import { connect } from 'react-redux';
 
 import '../css/biosection.css';
@@ -6,7 +6,7 @@ import '../App.css';
 const BioSection = ({ isNightMode }) => {
 
     return (
-        <div className={`biosection ${isNightMode ? 'night-mode' : 'day-mode'}`}>
+        <div className={`biosection ${isNightMode ? 'night-mode-no-bg' : 'day-mode-no-bg'}`}>
             <div className="slide-in">
             <img  className="biophoto selectDisable" src={AureWeb} alt="bio aurelie">
             </img>

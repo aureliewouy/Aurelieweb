@@ -13,7 +13,7 @@ const HeaderNav = ({ isNightMode, toggleTheme }) => {
             <div>
                 {isNightMode?  <Logo  className='logo'/> :   <LogoDark  className='logo'/>}
             </div>
-            <div className={`clickable ${isNightMode ? 'night-mode' : 'day-mode'}`}>
+            <div className={`clickable ${isNightMode ? 'night-mode-no-bg' : 'day-mode-no-bg'}`}>
                 <div >
                 <a href="https://github.com/aureliewouy" className="cutlink" data-content="Github">
                 <span className="cutlink-inner">Github</span>
@@ -28,9 +28,9 @@ const HeaderNav = ({ isNightMode, toggleTheme }) => {
                </button>
                 <div className='lastpart'>
                     <a href='#test'>Bio</a>
-                    {/* <a href='#'>Music</a>
-                    <a href='#'>Series</a>
-                    <a href='#'>Games</a> */}
+                    <a href='#test'>Music</a>
+                    <a href='#test'>Series</a>
+                    <a href='#test'>Games</a>
                 </div>
             </div>
         </nav>
