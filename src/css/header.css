@@ -52,7 +52,43 @@ font-size :11vw;
     animation: float 5s ease-in-out infinite;
     width:90vw;
 }
-
+.aureliecedia{
+  width: 92vw;
+  height: 100%;
+  position: absolute;
+  top: -0.6vw;
+  left: 5vw;
+  background-size: cover; /* Redimensionne l'image pour qu'elle couvre toute la div */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image dans la div */
+  background-image: url('../medias/transparent.svg');
+}
+.aurelieTop{
+  width: 68vw;
+  height: 100%;
+  position: absolute;
+  top: -6.6vw;
+  left: 16vw;
+  background-size: contain; /* Redimensionne l'image pour qu'elle couvre toute la div */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image dans la div */
+  background-image: url('../medias/transparent.svg');
+  will-change:transform;
+  animation: float 5s ease-in-out infinite;
+}
+.aurelieBottom{
+  width: 90.5vw;
+  height: 100%;
+  position: absolute;
+  bottom: -4.7vw;
+  left: 5.4vw;
+  background-size: contain; /* Redimensionne l'image pour qu'elle couvre toute la div */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-position: center; /* Centre l'image dans la div */
+  background-image: url('../medias/transparent.svg');
+  will-change:transform;
+  animation: float 5s ease-in-out infinite;
+}
 @keyframes float {
     0%, 100% {
         transform: translateY(.5%);

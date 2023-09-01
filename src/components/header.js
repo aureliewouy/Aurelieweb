@@ -1,7 +1,7 @@
 import '../css/header.css';
 import '../App.css';
-import Aure from "../medias/transparent.svg"
-import AureDark from "../medias/transparentDark.svg"
+import AureTop from "../medias/h1-top.svg"
+import AureBottom from "../medias/h1-bottom.svg"
 import { connect } from 'react-redux';
 import { toggleTheme } from '../redux/themeaction';
 const Header = ({ isNightMode, toggleTheme }) => {
@@ -43,13 +43,15 @@ return (
               </span><br/>
             <span>DÉVELOPPEUSE WEB      
              </span>
-             <div style={{width:'70vw'}} >
+             {/* <div style={{width:'70vw'}} >
              {isNightMode? 
               <img className="aureWeb selectDisable" src={Aure} alt='Aurélie CEDIA transparent'/>:
               <img className="aureWeb selectDisable" src={AureDark} alt='Aurélie CEDIA transparent'/>}
               
-              </div> 
+              </div>  */}
         </h1>
+        <div className='aurelieTop'  style={{backgroundImage: `url(${AureTop})`}}>       </div> 
+             <div className='aurelieBottom'  style={{backgroundImage: `url(${AureBottom})`}}></div>
       </div>
     );
 }
