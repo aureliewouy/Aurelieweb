@@ -1,6 +1,7 @@
 .biosection {
     width: 70vw;
     margin: auto;
+    z-index: 2;
 }
 .biosection > div {
     position: relative;
