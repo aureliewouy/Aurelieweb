@@ -1,9 +1,24 @@
-import AureWeb from "../medias/aureliebeige.png";
-import { connect } from "react-redux";
 
+import { connect } from "react-redux";
+import detourjaune from "../medias/detourjaune.png"
 import "../App.css";
 import "../css/biosection.css";
 const BioSection = ({ isNightMode }) => {
+    /**effet de l'image zoom */
+    
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+    
+        const zoomFactor = 0.02; 
+        let scaleFactor = 1 + scrollPosition * zoomFactor;
+        const maxScale = 5;
+        if (scaleFactor > maxScale) {
+            scaleFactor = maxScale;
+        }
+    
+        // Appliquez l'agrandissement à l'image
+        document.querySelector('.biophotodetour').style.transform = `scale(${scaleFactor})`;
+    });
   return (
     <div
       className={`biosection ${
@@ -11,18 +26,23 @@ const BioSection = ({ isNightMode }) => {
       }`}
     >
       <div className="slide-in photocontainer">
-        <img
+      <img
+          className="biophotodetour selectDisable"
+          src={detourjaune}
+          alt="bio aurelie"
+        />
+        {/* <img
           className="biophoto selectDisable"
           src={AureWeb}
           alt="bio aurelie"
         />
         <div className="photohide"></div>
         <div className="photohide"></div>
-        <div className="photohide"></div>
+        <div className="photohide"></div> */}
         {/* <div className="photohide"></div> */}
         {/* <div className="photohide"></div> */}
       </div>
-      <p style={{ textAlign: "left" }} className="activeLeft">
+      <p style={{ textAlign: "left" }} className="activeLeft textbio">
         {" "}
         Hey, je suis Aurélie j'ai 28 ans et j'habite à Paris.
         <br />

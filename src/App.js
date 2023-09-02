@@ -36,8 +36,9 @@ function App({ isNightMode }) {
   }
   // Ajout d'animation au scroll
   function handleScroll() {
-    var slideInRightElements = document.querySelectorAll(".active");
-    var slideInLeftElements = document.querySelectorAll(".activeLeft");
+    const slideInRightElements = document.querySelectorAll(".active");
+    const slideInLeftElements = document.querySelectorAll(".activeLeft");
+    const aurebio = document.querySelectorAll(".biophotodetour");
 
     slideInRightElements.forEach(function (element) {
       if (isInViewport(element)) {
@@ -49,12 +50,20 @@ function App({ isNightMode }) {
         element.classList.add("slide-in-left");
       }
     });
+    aurebio.forEach(function (element) {
+      if (isInViewport(element)) {
+        element.classList.add("scalephoto");
+      }
+    });
   }
   window.addEventListener("scroll", handleScroll);
   handleScroll();
+/**Pour être en haut de la page */
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
+
+
   return (
     <div className={`App ${isNightMode ? "night-mode" : "day-mode"}`}>
       <div className="nightrevealContainer">

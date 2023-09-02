@@ -31,9 +31,9 @@ const Popup = ({ imageUrl, onClose, allImg }) => {
     <div className="popup-container" onClick={onClose}>
       <div className="popup-content" onClick={handleClick}>
         <img src={currentimg} alt="bigger" />
+        <button onClick={handlePreviousImg}>Précedent</button>
         <button onClick={onClose}>Fermer</button>
         <button onClick={handleImg}>Suivant</button>
-        <button onClick={handlePreviousImg}>Précedent</button>
       </div>
     </div>
   );

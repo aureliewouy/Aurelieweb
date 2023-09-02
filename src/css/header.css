@@ -1,3 +1,6 @@
+header{
+  height: 80px;
+}
 .headerNav {
   top: 0;
   display: flex;
@@ -5,7 +8,8 @@
   color: var(--eggshell);
   padding: 20px 50px;
   z-index: 5;
-  position: sticky;
+  position: fixed;
+  width: 95vw;
 }
 .headerNav div {
   display: flex;
@@ -13,11 +17,12 @@
   gap: 10px;
 }
 .clickable {
-  display: inline-grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 90%;
   justify-content: space-between;
 }
+
 .clickable a,
 .clickable button,
 .lastpart a {
@@ -31,10 +36,17 @@
   width: 65px;
 }
 
-.h1container {
+/* .h1container {
   overflow: hidden;
   position: relative;
   display: flex;
+} */
+.h1container {
+  padding-top: 170px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  z-index: 1;
 }
 .hideh1 {
   position: absolute;
@@ -107,6 +119,7 @@ h1 {
   background-image: url("../medias/transparent.svg");
 }
 .aurelieTop {
+ 
   width: 68vw;
   height: 100%;
   position: absolute;
@@ -120,23 +133,31 @@ h1 {
   animation:
     wait 3s ease-in 1,
     float 5s ease-in-out infinite;
+     /*tesst*/
+  z-index: 1;
+  top: -2.6vw;
+  /*tesst*/
 }
 .aurelieBottom {
+
   width: 90.5vw;
   height: 100%;
   position: absolute;
   bottom: -1.7vw;
   left: 5.4vw;
-  background-size: contain; /* Redimensionne l'image pour qu'elle couvre toute la div */
-  background-repeat: no-repeat; /* Empêche la répétition de l'image */
-  background-position: center; /* Centre l'image dans la div */
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: center; 
   background-image: url("../medias/transparent.svg");
   will-change: transform;
   animation:
     wait 3s ease-in 1,
     float 5s ease-in-out infinite;
   opacity: 1;
-  /* float 5s ease-in-out infinite ; */
+   /*tesst*/
+   z-index: 1;
+   bottom: -8.7vw;
+   /*tesst*/
 }
 
 @media (max-width: 900px) {
