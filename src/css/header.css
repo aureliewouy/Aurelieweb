@@ -1,56 +1,56 @@
-.headerNav{
+.headerNav {
   top: 0;
-    display: flex;
-    justify-content: space-between;
-    color:var(--eggshell);
-    padding: 20px 50px;
-    z-index: 5;
-    position: sticky;
+  display: flex;
+  justify-content: space-between;
+  color: var(--eggshell);
+  padding: 20px 50px;
+  z-index: 5;
+  position: sticky;
 }
 .headerNav div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .clickable {
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  justify-content: space-between;
 }
-.clickable a, .clickable button, .lastpart a{
-    font-family: arcade classic;
-    font-size: 28px;
-    text-decoration: none;
-    color:var(--eggshell);
+.clickable a,
+.clickable button,
+.lastpart a {
+  font-family: arcade classic;
+  font-size: 28px;
+  text-decoration: none;
+  color: var(--eggshell);
 }
 
 .logo {
-    width: 65px;
+  width: 65px;
 }
 
-.h1container{
+.h1container {
   overflow: hidden;
   position: relative;
   display: flex;
 }
-.hideh1{
+.hideh1 {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: var(--cornsilk);
   animation-name: appearbg;
   animation-duration: 1.6s;
-  animation-timing-function: ease-out ;
+  animation-timing-function: ease-out;
   transform: translateY(110%);
-
 }
 @keyframes appearbg {
   0% {
     transform: translateY(42%);
-
   }
   100% {
-
     transform: translateY(110%);
   }
 }
@@ -59,25 +59,25 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  font-size :11vw;
-    letter-spacing: -5px;
-    color:var(--rose);
-    font-weight: bolder;
-    line-height: 1;
-    position: relative;
-    font-family: kabel;
-    margin-top: 2rem;
-    animation-name: appear;
-    animation-duration: 1s;
-    animation-timing-function:ease-out;
+  font-size: 11vw;
+  letter-spacing: -5px;
+  color: var(--rose);
+  font-weight: bolder;
+  line-height: 1;
+  position: relative;
+  font-family: kabel;
+  margin-top: 2rem;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 @keyframes appear {
   0% {
-      transform: translateY(50%);
+    transform: translateY(50%);
   }
-  
+
   100% {
-      transform: translateY(0%);
+    transform: translateY(0%);
   }
 }
 .spanTitle {
@@ -86,16 +86,16 @@ h1 {
 
 .aureWeb {
   display: block;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 20px;
-    left: 5vw;
-    height: 100%;
-    will-change:transform;
-    animation: float 5s ease-in-out infinite;
-    width:90vw;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 20px;
+  left: 5vw;
+  height: 100%;
+  will-change: transform;
+  animation: float 5s ease-in-out infinite;
+  width: 90vw;
 }
-.aureliecedia{
+.aureliecedia {
   width: 92vw;
   height: 100%;
   position: absolute;
@@ -104,22 +104,24 @@ h1 {
   background-size: cover; /* Redimensionne l'image pour qu'elle couvre toute la div */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
   background-position: center; /* Centre l'image dans la div */
-  background-image: url('../medias/transparent.svg');
+  background-image: url("../medias/transparent.svg");
 }
-.aurelieTop{
+.aurelieTop {
   width: 68vw;
-  height:  100%;
+  height: 100%;
   position: absolute;
   top: -8.6vw;
   left: 16vw;
   background-size: contain; /* Redimensionne l'image pour qu'elle couvre toute la div */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
   background-position: center; /* Centre l'image dans la div */
-  background-image: url('../medias/transparent.svg');
-  will-change:transform;
-  animation: wait 3s ease-in 1, float 5s ease-in-out infinite;
+  background-image: url("../medias/transparent.svg");
+  will-change: transform;
+  animation:
+    wait 3s ease-in 1,
+    float 5s ease-in-out infinite;
 }
-.aurelieBottom{
+.aurelieBottom {
   width: 90.5vw;
   height: 100%;
   position: absolute;
@@ -128,20 +130,22 @@ h1 {
   background-size: contain; /* Redimensionne l'image pour qu'elle couvre toute la div */
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
   background-position: center; /* Centre l'image dans la div */
-  background-image: url('../medias/transparent.svg');
-  will-change:transform;
-  animation: wait 3s ease-in 1, float 5s ease-in-out infinite; 
+  background-image: url("../medias/transparent.svg");
+  will-change: transform;
+  animation:
+    wait 3s ease-in 1,
+    float 5s ease-in-out infinite;
   opacity: 1;
   /* float 5s ease-in-out infinite ; */
 }
 
 @media (max-width: 900px) {
-  .aurelieTop{
+  .aurelieTop {
     width: 59vw;
     top: -7.6vw;
     left: 21vw;
   }
-  .aurelieBottom{
+  .aurelieBottom {
     width: 79.5vw;
     bottom: -4.7vw;
     left: 11.4vw;
@@ -149,180 +153,205 @@ h1 {
   .logo {
     width: 45px;
   }
-  .clickable a, .clickable button, .lastpart a {
+  .clickable a,
+  .clickable button,
+  .lastpart a {
     font-size: 25px;
-}
   }
+}
 @keyframes float {
-    0%, 100% {
-        transform: translateY(.5%);
-    }
-    
-    50% {
-        transform: translateY(-1%);
-    }
+  0%,
+  100% {
+    transform: translateY(0.5%);
+  }
+
+  50% {
+    transform: translateY(-1%);
+  }
 }
 @keyframes wait {
-    0%, 90% {
-        opacity: 0;
-    }
-    
-    100% {
-      opacity:1;
-    }
+  0%,
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Button hover effect github / linkedin*/
 :root {
-    --easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    --easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-  
-  
-  .cutlink {
-    position: relative;
-    white-space: nowrap;
-  }
-  
-  .cutlink-inner {
-    clip-path: polygon(0 -20%, 100% -20%, 100% 51%, 0 51%);
-    -webkit-clip-path: polygon(0 -20%, 100% -20%, 100% 51%, 0 51%);
-    display: block;
-    transition: transform 0.2s var(--easeOutBack);
-  }
-  
-  .cutlink:before {
-    content: attr(data-content);
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    clip-path: polygon(0 120%, 100% 120%, 100% 50%, 0 50%);
-    -webkit-clip-path: polygon(0 120%, 100% 120%, 100% 50%, 0 50%);
-    transition: transform 0.2s var(--easeOutBack);
-  }
-  
-  .cutlink-inner, .cutlink:before {
-    transition: transform 0.2s var(--easeOutBack);
-  }
-  
-  .cutlink:hover .cutlink-inner, .cutlink:hover:before {
-    transition: transform 1s var(--easeOutCirc);
-  }
-  
-  .cutlink:hover:before {
-    transform: translate(3px, 1px);
-  }
-  
-  .cutlink:hover .cutlink-inner {
-    transform: translate(-3px, -1px);
-  }
-  /* light mode effect */
-  .glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    background: transparent;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  --easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cutlink {
+  position: relative;
+  white-space: nowrap;
+}
+
+.cutlink-inner {
+  clip-path: polygon(0 -20%, 100% -20%, 100% 51%, 0 51%);
+  -webkit-clip-path: polygon(0 -20%, 100% -20%, 100% 51%, 0 51%);
+  display: block;
+  transition: transform 0.2s var(--easeOutBack);
+}
+
+.cutlink:before {
+  content: attr(data-content);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 120%, 100% 120%, 100% 50%, 0 50%);
+  -webkit-clip-path: polygon(0 120%, 100% 120%, 100% 50%, 0 50%);
+  transition: transform 0.2s var(--easeOutBack);
+}
+
+.cutlink-inner,
+.cutlink:before {
+  transition: transform 0.2s var(--easeOutBack);
+}
+
+.cutlink:hover .cutlink-inner,
+.cutlink:hover:before {
+  transition: transform 1s var(--easeOutCirc);
+}
+
+.cutlink:hover:before {
+  transform: translate(3px, 1px);
+}
+
+.cutlink:hover .cutlink-inner {
+  transform: translate(-3px, -1px);
+}
+/* light mode effect */
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(3px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    will-change:transform;
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(3px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  will-change: transform;
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 .glow-on-hover:active {
-    color: #000
+  color: #000;
 }
 
 .glow-on-hover:active:after {
-    background: transparent;
+  background: transparent;
 }
 
 .glow-on-hover:hover:before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--purpledark);
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--purpledark);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 .animate-text {
-    /* opacity: 0; */
-    will-change:transform;
-    animation-name: zoom;
-    animation-duration: 0.7s;
-    animation-iteration-count: 1;
-    /* transform: translateX(-100%);
+  /* opacity: 0; */
+  will-change: transform;
+  animation-name: zoom;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+  /* transform: translateX(-100%);
     animation: zoom 1s ; */
-    /* transform: scale(0.2); */
-  }
-  
-  /* .animate-heartbeat {
+  /* transform: scale(0.2); */
+}
+
+/* .animate-heartbeat {
     animation: heartbeat 1s infinite;
   } */
-  
-  @keyframes slideIn {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  @keyframes heartbeat {
-    0%, 50%, 100% {
-      transform: scale(1);
-    }
-    25%, 75% {
-      transform: scale(1.05);
-    }
+}
+
+@keyframes heartbeat {
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
   }
-  @keyframes zoom {
-    0% {
-      transform: scale(0.2);
-    }
-    100%{
-      transform: scale(1);
-    }
+  25%,
+  75% {
+    transform: scale(1.05);
   }
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @media (max-width: 900px) {
-.clickable div{
-  display: none;
-}
-.aureWeb{
-  display: none;
-}
+  .clickable div {
+    display: none;
+  }
+  .aureWeb {
+    display: none;
+  }
 }

@@ -10,16 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout le code
-      uses: actions/checkout@v2
+      - name: Checkout le code
+        uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14 # Remplacez par la version de Node.js requise par votre projet
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14 # Remplacez par la version de Node.js requise par votre projet
 
-    - name: Installer les dépendances
-      run: npm install
+      - name: Installer les dépendances
+        run: npm install
 
-    - name: Construire le projet
-      run: npm run build # Remplacez par la commande de build de votre projet
+      - name: Construire le projet
+        run: npm run build # Remplacez par la commande de build de votre projet

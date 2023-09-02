@@ -1,19 +1,17 @@
 .tapeContainer {
-    margin-top: 20vh;
-    margin-bottom: 20vh;
-    /* background-color: var(--eggshell); */
-    /* width: 100%; */
-    position: relative;
-    overflow-x: hidden;
-    
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  /* background-color: var(--eggshell); */
+  /* width: 100%; */
+  position: relative;
+  overflow-x: hidden;
 }
 .tape {
-    display:flex;
-    white-space: nowrap;
-    align-items: center;
-    will-change:transform;
-    animation: tickerAnimation 25s linear infinite;
-
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  will-change: transform;
+  animation: tickerAnimation 25s linear infinite;
 }
 /* .tape p {
     text-align: right;
@@ -22,11 +20,11 @@
     margin: 5px;
 } */
 .tape p {
-    text-align: right;
-    font-size: 55px;
-    font-size: bolder;
-    margin: 5px;
-    color: rgba(225,225,225,0.7)
+  text-align: right;
+  font-size: 55px;
+  font-size: bolder;
+  margin: 5px;
+  color: rgba(225, 225, 225, 0.7);
 }
 .tape span {
   padding-left: 10px;
@@ -34,11 +32,11 @@
 }
 
 @keyframes tickerAnimation {
-    0% {
-        transform: translateX(0);
-    }
-    
-    100% {
-        transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
