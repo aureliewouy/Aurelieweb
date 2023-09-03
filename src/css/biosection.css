@@ -6,8 +6,7 @@
   position: relative;
 }
 .biophoto {
-  border-radius: 25px;
-  width: 70vw;
+  width: 58vw;
   will-change: transform;
   transform: rotate(-4deg) translateY(-135px);
   position: relative;
@@ -34,31 +33,31 @@
   position: absolute;
   width: 120%;
   height: 40%;
-  top: -20%;
-  right: -1%;
+  top: -29%;
+  right: 10%;
   background-color: var(--purpledark);
-  /* border-radius: 25px; */
   will-change: transform;
   transform: rotate(-4deg) translateX(-120%);
   animation-name: slideleft;
-  animation-duration: 4.8s;
+  animation-duration: 4.9s;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.27, 0.31, 0.41, 1.4);
 }
 
 .photohide:nth-of-type(2) {
-  animation-duration: 5s;
-  top: 20%;
+  animation-duration: 4.95s;
+  top: 10%;
+  right: 9%;
 }
 .photohide:nth-of-type(3) {
-  animation-duration: 5.12s;
-
-  top: 60%;
+  animation-duration: 5s;
+  right: 8%;
+  top: 49%;
 }
 
 @keyframes slideleft {
   0%,
-  75% {
+  73% {
     transform: translateX(0) rotate(-4deg) translateZ(0);
   }
   100% {

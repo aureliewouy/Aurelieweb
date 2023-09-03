@@ -1,4 +1,4 @@
-import AureWeb from "../medias/aureliebeige.png";
+import AureWeb from "../medias/aurebeige.png";
 import { connect } from "react-redux";
 
 import "../App.css";

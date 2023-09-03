@@ -6,7 +6,6 @@ import axereal from "../medias/axereal.gif";
 import rockPaper from "../medias/game.gif";
 import Popup from "./popup";
 function ProjetSection() {
-  const [isBlue, setIsBlue] = useState(false);
   const [popupImageUrl, setPopupImageUrl] = useState(null);
 
   const handleImageClick = (imageUrl) => {
@@ -15,9 +14,6 @@ function ProjetSection() {
 
   const handleClosePopup = () => {
     setPopupImageUrl(null);
-  };
-  const handleInputChange = () => {
-    setIsBlue(!isBlue);
   };
   const allImg = [tgdplatform, coruscant, axereal, rockPaper];
 
@@ -39,26 +35,10 @@ function ProjetSection() {
               name="slider"
               id="item-1"
               defaultChecked={true}
-              onChange={handleInputChange}
             />
-            <input
-              type="radio"
-              name="slider"
-              id="item-2"
-              onChange={handleInputChange}
-            />
-            <input
-              type="radio"
-              name="slider"
-              id="item-3"
-              onChange={handleInputChange}
-            />
-            <input
-              type="radio"
-              name="slider"
-              id="item-4"
-              onChange={handleInputChange}
-            />
+            <input type="radio" name="slider" id="item-2" />
+            <input type="radio" name="slider" id="item-3" />
+            <input type="radio" name="slider" id="item-4" />
             <div className="cards">
               <label className="cardProjet" htmlFor="item-1" id="projet-1">
                 <img src={tgdplatform} alt="platform Thegreendata" />
@@ -78,53 +58,39 @@ function ProjetSection() {
                 <div className="info-area" id="test">
                   <label className="projet-info" id="projet-info-1">
                     <div className="title">Platform Thegreendata</div>
-                    <div className="sub-line">
-                      <div className="subtitle">
-                        Calcul de l'impact carbonne de l'alimentation
-                      </div>
-                      <div
-                        className="voirplusbtn"
-                        onClick={() => handleImageClick(tgdplatform)}
-                      >
-                        <p>Voir plus</p>
-                      </div>
-                    </div>
+                    <button
+                      className="seemore"
+                      onClick={() => handleImageClick(tgdplatform)}
+                    >
+                      Voir plus
+                    </button>
                   </label>
                   <label className="projet-info" id="projet-info-2">
                     <div className="title">Coruscant</div>
-                    <div className="sub-line">
-                      <div className="subtitle">Projection des récoltes</div>
-                      <div
-                        className="voirplusbtn"
-                        onClick={() => handleImageClick(coruscant)}
-                      >
-                        <p>Voir plus</p>
-                      </div>
-                    </div>
+                    <button
+                      className="seemore"
+                      onClick={() => handleImageClick(coruscant)}
+                    >
+                      Voir plus
+                    </button>
                   </label>
                   <label className="projet-info" id="projet-info-3">
                     <div className="title">Axéréal</div>
-                    <div className="sub-line">
-                      <div className="subtitle">Projection des récoltes</div>
-                      <div
-                        className="voirplusbtn"
-                        onClick={() => handleImageClick(axereal)}
-                      >
-                        <p>Voir plus</p>
-                      </div>
-                    </div>
+                    <button
+                      className="seemore"
+                      onClick={() => handleImageClick(axereal)}
+                    >
+                      Voir plus
+                    </button>
                   </label>
                   <label className="projet-info" id="projet-info-4">
                     <div className="title">Pierre feuille ciseaux</div>
-                    <div className="sub-line">
-                      <div className="subtitle">Projet perso d'un jeux</div>
-                      <div
-                        className="voirplusbtn"
-                        onClick={() => handleImageClick(rockPaper)}
-                      >
-                        <p>Voir plus</p>
-                      </div>
-                    </div>
+                    <button
+                      className="seemore"
+                      onClick={() => handleImageClick(rockPaper)}
+                    >
+                      Voir plus
+                    </button>
                   </label>
                 </div>
               </div>
