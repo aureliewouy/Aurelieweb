@@ -5,7 +5,6 @@ header {
   top: 0;
   display: flex;
   justify-content: space-between;
-  color: var(--eggshell);
   padding: 20px 50px;
   z-index: 5;
   position: fixed;
@@ -28,7 +27,7 @@ header {
   font-family: arcade classic;
   font-size: 28px;
   text-decoration: none;
-  color: var(--eggshell);
+  color: var(--cornsilk);
 }
 
 .logo {

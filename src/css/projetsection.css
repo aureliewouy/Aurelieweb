@@ -1,6 +1,7 @@
 .projetsection {
   color: var(--eggshell);
   height: 100%;
+  margin-bottom: 6%;
   /* margin :  50px; */
 }
 .caroussel {
@@ -13,10 +14,14 @@
   background-color: var(--yellow);
 }
 .projetsection h2 {
-  font-size: 8vw;
+  font-size: 6vw;
   display: block;
   width: 100%;
+  border-color: var(--rose);
+  border-width: 10px 0 10px 0;
+  border-style: dotted;
 }
+
 input[type="radio"] {
   display: none;
 }
@@ -90,7 +95,7 @@ label > img {
   border-radius: 8px;
   width: 100%;
   min-width: 270px;
-  padding: 16px 10px;
+  /* padding: 16px 10px; */
   margin: auto;
   margin-top: 20em;
 }
@@ -100,135 +105,85 @@ label > img {
   display: flex;
   align-items: center;
   margin-bottom: 22px;
-  height: 140px;
+  height: 170px;
   overflow: hidden;
-}
-.voirplusbtn {
-  cursor: pointer;
-  position: absolute;
-  top: -10px;
-  right: 20px;
-}
-.voirplusbtn p {
-  color: var(--matteblack);
-  font-size: 12px;
-}
-.projet-info {
-  width: calc(100% - 32px);
-  display: inline-grid;
-
-  /* padding-bottom: 20px;
- padding-top: 20px; */
-}
-
-.projet-info .title {
-  color: white;
-  font-size: 30px;
-  line-height: 64px;
-}
-.title {
-  margin-bottom: 30px;
-}
-.sub-line {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  position: relative;
-}
-
-.subtitle {
-  font-size: 16px;
-  line-height: 16px;
-  color: var(--purpledark);
-}
-
-/* CSS */
-.seemore {
-  background-color: var(--rose);
-  border: 0 solid #e5e7eb;
-  box-sizing: border-box;
-  color: #000000;
-  display: flex;
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    system-ui,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
-  font-size: 12px;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1.75rem;
-  padding: 0.75rem 1.65rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none white solid;
-  text-decoration-thickness: auto;
-  width: 120px;
-  cursor: pointer;
-  transform: rotate(-2deg);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  border-radius: 10px;
+  width: 250px;
   margin: auto;
-  transform: translateY(-32px);
+  z-index: 2;
+  transform: translateY(-77px);
 }
 
-.seemore:focus {
-  outline: 0;
-}
-
-.seemore:after {
-  content: "";
-  position: absolute;
-  border: 1px solid white;
-  bottom: 4px;
-  left: 4px;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-}
-
-.seemore:hover:after {
-  bottom: 2px;
-  left: 2px;
-}
-
-/* @media (min-width: 768px) {
-  .seemore {
-    padding: .75rem 3rem;
-    font-size: 1.25rem;
-  }
-} */
-.info-area {
+.projet-info {
+  padding: 20px 30px;
   width: 100%;
+  height: 170px;
+  display: inline-grid;
+}
+.projet-info .title {
+  color: var(--cornsilk);
+  font-family: arcade classic;
+  text-align: left;
+  font-size: 30px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.langages ul li {
+  color: red; /* Remplacez par la couleur de votre choix */
+}
+.seemore {
+  cursor: pointer;
+  margin: auto;
+  z-index: 2;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: var(--purpledark);
+  box-shadow:
+    inset 12px 12px 24px #0a0a0f,
+    inset -12px -12px 24px #28283d;
+}
+.playicon {
+  width: 75px;
+  height: 75px;
+}
+.seemore:active {
+  background: linear-gradient(145deg, #1b1b29, #171722);
+  box-shadow:
+    12px 12px 24px #0a0a0f,
+    -12px -12px 24px #28283d;
+}
+.info-area {
+  width: 250px;
   position: absolute;
   top: 0;
-  left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--purpledark);
+  background: linear-gradient(145deg, #171722, #1b1b29);
+  box-shadow:
+    12px 12px 24px #0a0a0f,
+    -12px -12px 24px #28283d;
   transition: transform 0.4s ease-in;
 }
-
 #item-2:checked ~ .player #test {
   transform: translateY(0);
 }
+#item-2:checked ~ #projet-info-3 {
+  opacity: 0;
+}
 
 #item-2:checked ~ .player #test {
-  transform: translateY(-150px);
+  transform: translateY(-170px);
 }
 
 #item-3:checked ~ .player #test {
-  transform: translateY(-300px);
+  transform: translateY(-380px);
 }
 #item-4:checked ~ .player #test {
-  transform: translateY(-450px);
+  transform: translateY(-560px);
 }
 
 @media (max-width: 900px) {
@@ -240,7 +195,23 @@ label > img {
   img {
     border-radius: 0;
   }
+  .player {
+    margin-top: 9em;
+  }
+  .upper-part,
+  .info-area {
+    width: 150px;
+    height: 130px;
+  }
+  .seemore,
+  .playicon {
+    width: 55px;
+    height: 55px;
+  }
 
+  .projet-info .title {
+    font-size: 15px;
+  }
   #item-1:checked ~ .cards #projet-4,
   #item-2:checked ~ .cards #projet-1,
   #item-3:checked ~ .cards #projet-2,
@@ -258,4 +229,28 @@ label > img {
     opacity: 0.4;
     z-index: 0;
   }
+}
+.backgroundNightmode {
+  background: var(--purpledark);
+  box-shadow:
+    21px 21px 42px #0a0a0f,
+    -21px -21px 42px #28283d;
+}
+.backgroundDaymode {
+  background: #fa2a58;
+  box-shadow:
+    inset 50px 50px 100px #e62751,
+    inset -50px -50px 100px #ff2d5f;
+}
+.seemoreWhite {
+  background: #faf3d3;
+  box-shadow:
+    inset 12px 12px 24px #646154,
+    inset -12px -12px 24px #ffffff;
+}
+.seemoreWhite:active {
+  background: #faf3d3;
+  box-shadow:
+    inset 50px 50px 100px #e6e0c2,
+    inset -50px -50px 100px #ffffe4;
 }

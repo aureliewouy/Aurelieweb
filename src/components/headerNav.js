@@ -4,7 +4,7 @@ import "../css/header.css";
 import "../App.css";
 import { connect } from "react-redux";
 import { toggleTheme } from "../redux/themeaction";
-
+import cv from "../medias/AurelieCedia.pdf";
 const HeaderNav = ({ isNightMode, toggleTheme }) => {
   return (
     <nav className="slide-in-top headerNav">
@@ -41,11 +41,9 @@ const HeaderNav = ({ isNightMode, toggleTheme }) => {
           {isNightMode ? "Light mode" : " Dark mode"}
         </button>
         <div className="lastpart">
-          <a href="#test">TELECHARGER MON CV</a>
-          {/* <a href='#test'>Bio</a>
-                    <a href='#test'>Cv</a>
-                    <a href='#test'>Series</a>
-                    <a href='#test'>Games</a> */}
+          <a href={cv} target="_blank" rel="noreferrer">
+            TELECHARGER MON CV
+          </a>
         </div>
       </div>
     </nav>

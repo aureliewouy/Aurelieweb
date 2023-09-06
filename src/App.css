@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: var(--purpledark);
 }
@@ -67,14 +70,14 @@ body::-webkit-scrollbar {
   }
 }
 .day-mode {
-  color: var(--matteblack);
+  color: var(--purpledark);
   background-color: var(--cornsilk);
 }
 .day-mode a,
 .day-mode p,
 .day-mode-no-bg a,
 .day-mode-no-bg p {
-  color: var(--matteblack) !important;
+  color: var(--purpledark) !important;
 }
 .night-mode {
   color: white;

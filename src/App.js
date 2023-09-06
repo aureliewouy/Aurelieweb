@@ -8,6 +8,7 @@ import ContactSection from "./components/contactSection";
 import Footer from "./components/footer";
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import Aboutme from "./components/aboutme";
 
 function App({ isNightMode }) {
   // Attacher l'événement scroll après un délai de 2 secondes
@@ -71,6 +72,7 @@ function App({ isNightMode }) {
 
       <BioSection />
       <ProjetSection />
+      <Aboutme/>
       <ContactSection />
       <Footer />
     </div>

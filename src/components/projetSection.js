@@ -5,7 +5,11 @@ import coruscant from "../medias/coruscant.gif";
 import axereal from "../medias/axereal.gif";
 import rockPaper from "../medias/game.gif";
 import Popup from "./popup";
-function ProjetSection() {
+import { ReactComponent as PlayBlue } from "../medias/play-button-blue.svg";
+import { ReactComponent as Play } from "../medias/play-button.svg";
+import { connect } from "react-redux";
+
+const ProjetSection = ({ isNightMode }) => {
   const [popupImageUrl, setPopupImageUrl] = useState(null);
 
   const handleImageClick = (imageUrl) => {
@@ -26,8 +30,14 @@ function ProjetSection() {
           allImg={allImg}
         />
       )}
-      <div className="projetsection active" style={{ marginBottom: "200px" }}>
-        <h2>Mes réalisations</h2>
+      <div className="projetsection active">
+        <h2
+          style={{
+            color: isNightMode ? " var(--cornsilk)" : " var(--purpledark)",
+          }}
+        >
+          Mes projets
+        </h2>
         <div className="caroussel">
           <div className="carousselContainer">
             <input
@@ -53,44 +63,71 @@ function ProjetSection() {
                 <img src={rockPaper} alt="rock paper scissors website" />
               </label>
             </div>
+            <div>Hello the green DATA</div>
             <div className="player">
-              <div className="upper-part">
-                <div className="info-area" id="test">
+              <div
+                className={`upper-part ${
+                  isNightMode ? "backgroundNightmode" : "backgroundDaymode"
+                }`}
+              >
+                <div
+                  className={`info-area ${
+                    isNightMode ? "backgroundNightmode" : "backgroundDaymode"
+                  }`}
+                  id="test"
+                >
                   <label className="projet-info" id="projet-info-1">
                     <div className="title">Platform Thegreendata</div>
-                    <button
-                      className="seemore"
+                    <div
+                      className={`seemore ${!isNightMode && "seemoreWhite"}`}
                       onClick={() => handleImageClick(tgdplatform)}
                     >
-                      Voir plus
-                    </button>
+                      {isNightMode ? (
+                        <Play className="playicon" />
+                      ) : (
+                        <PlayBlue className="playicon" />
+                      )}
+                    </div>
+                    {/* </div> */}
                   </label>
                   <label className="projet-info" id="projet-info-2">
                     <div className="title">Coruscant</div>
-                    <button
-                      className="seemore"
+                    <div
+                      className={`seemore ${!isNightMode && "seemoreWhite"}`}
                       onClick={() => handleImageClick(coruscant)}
                     >
-                      Voir plus
-                    </button>
+                      {isNightMode ? (
+                        <Play className="playicon" />
+                      ) : (
+                        <PlayBlue className="playicon" />
+                      )}
+                    </div>
                   </label>
                   <label className="projet-info" id="projet-info-3">
-                    <div className="title">Axéréal</div>
-                    <button
-                      className="seemore"
+                    <div className="title">Copilote</div>
+                    <div
+                      className={`seemore ${!isNightMode && "seemoreWhite"}`}
                       onClick={() => handleImageClick(axereal)}
                     >
-                      Voir plus
-                    </button>
+                      {isNightMode ? (
+                        <Play className="playicon" />
+                      ) : (
+                        <PlayBlue className="playicon" />
+                      )}
+                    </div>
                   </label>
                   <label className="projet-info" id="projet-info-4">
                     <div className="title">Pierre feuille ciseaux</div>
-                    <button
-                      className="seemore"
+                    <div
+                      className={`seemore ${!isNightMode && "seemoreWhite"}`}
                       onClick={() => handleImageClick(rockPaper)}
                     >
-                      Voir plus
-                    </button>
+                      {isNightMode ? (
+                        <Play className="playicon" />
+                      ) : (
+                        <PlayBlue className="playicon" />
+                      )}
+                    </div>
                   </label>
                 </div>
               </div>
@@ -100,5 +137,9 @@ function ProjetSection() {
       </div>
     </>
   );
-}
-export default ProjetSection;
+};
+const mapStateToProps = (state) => ({
+  isNightMode: state.isNightMode,
+});
+
+export default connect(mapStateToProps)(ProjetSection);
