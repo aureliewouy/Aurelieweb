@@ -8,7 +8,7 @@ const Aboutme = ({ isNightMode }) => {
         isNightMode ? "night-mode-no-bg" : "day-mode-no-bg"
       }`}
     >
-      <p style={{ textAlign: "left" }}>
+      <p>
         {" "}
         Hey, je suis Aurélie j'ai 28 ans et j'habite à Paris.
         <br />

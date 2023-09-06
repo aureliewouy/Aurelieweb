@@ -22,7 +22,7 @@ const BioSection = ({ isNightMode }) => {
         {/* <div className="photohide"></div> */}
         {/* <div className="photohide"></div> */}
       </div>
-      <p style={{ textAlign: "left" }} className="activeLeft">
+      <p className="activeLeft">
         {" "}
         Hey, je suis Aurélie j'ai 28 ans et j'habite à Paris.
         <br />

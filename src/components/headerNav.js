@@ -22,6 +22,8 @@ const HeaderNav = ({ isNightMode, toggleTheme }) => {
       >
         <div>
           <a
+            target="_blank"
+            rel="noreferrer"
             href="https://github.com/aureliewouy"
             className="cutlink"
             data-content="Github"
@@ -30,6 +32,8 @@ const HeaderNav = ({ isNightMode, toggleTheme }) => {
           </a>
           <p>•</p>
           <a
+            target="_blank"
+            rel="noreferrer"
             href="https://www.linkedin.com/in/aurelie-cedia-060248182"
             className="cutlink"
             data-content="Linkedin"

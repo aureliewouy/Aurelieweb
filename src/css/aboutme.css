@@ -1,14 +1,26 @@
 .aboutme {
-    width: 70vw;
-    margin: auto;
-margin-top: 20%;
-margin-bottom: 15%;
+  width: 70vw;
+  margin: auto;
+  margin-top: 20%;
+  margin-bottom: 15%;
 }
-.aboutme > p{
-    font-weight: bold;
-    font-size: 35px;
-    color: var(--cornsilk);
-    margin-bottom: 80px;
-    margin-top: -50px;
-    line-height: 1.1;
+.aboutme > p {
+  font-weight: bold;
+  font-size: 35px;
+  color: var(--cornsilk);
+  margin-bottom: 80px;
+  margin-top: -50px;
+  line-height: 1.1;
+  text-align: left;
+}
+@media (max-width: 900px) {
+  .aboutme {
+    margin-top: 0;
+    margin-bottom: 10em;
+  }
+  .aboutme > p {
+    margin: auto;
+    margin-top: 0;
+    font-size: 18px;
+  }
 }

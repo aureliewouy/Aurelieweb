@@ -33,7 +33,7 @@ const ProjetSection = ({ isNightMode }) => {
       <div className="projetsection active">
         <h2
           style={{
-            color: isNightMode ? " var(--cornsilk)" : " var(--purpledark)",
+            color: isNightMode ? " white" : " var(--purpledark)",
           }}
         >
           Mes projets
@@ -63,7 +63,6 @@ const ProjetSection = ({ isNightMode }) => {
                 <img src={rockPaper} alt="rock paper scissors website" />
               </label>
             </div>
-            <div>Hello the green DATA</div>
             <div className="player">
               <div
                 className={`upper-part ${

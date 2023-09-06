@@ -72,7 +72,7 @@ function App({ isNightMode }) {
 
       <BioSection />
       <ProjetSection />
-      <Aboutme/>
+      <Aboutme />
       <ContactSection />
       <Footer />
     </div>

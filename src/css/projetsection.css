@@ -142,7 +142,7 @@ label > img {
     inset -12px -12px 24px #28283d;
 }
 .playicon {
-  width: 75px;
+  width: 74px;
   height: 75px;
 }
 .seemore:active {
@@ -168,37 +168,32 @@ label > img {
 #item-2:checked ~ .player #test {
   transform: translateY(0);
 }
-#item-2:checked ~ #projet-info-3 {
-  opacity: 0;
-}
 
 #item-2:checked ~ .player #test {
-  transform: translateY(-170px);
+  transform: translateY(-180px);
 }
 
 #item-3:checked ~ .player #test {
-  transform: translateY(-380px);
+  transform: translateY(-370px);
 }
 #item-4:checked ~ .player #test {
-  transform: translateY(-560px);
+  transform: translateY(-575px);
 }
 
 @media (max-width: 900px) {
-  .cardProjet {
-    width: 240px;
-    height: 120px;
-    border-radius: 0;
-  }
   img {
     border-radius: 0;
   }
   .player {
     margin-top: 9em;
   }
+  .upper-part {
+    transform: translateY(-60px);
+  }
   .upper-part,
   .info-area {
     width: 150px;
-    height: 130px;
+    height: 120px;
   }
   .seemore,
   .playicon {
@@ -208,6 +203,22 @@ label > img {
 
   .projet-info .title {
     font-size: 15px;
+    line-height: 1;
+    padding-bottom: 10px;
+  }
+  #item-2:checked ~ .player #test {
+    transform: translateY(-10px);
+  }
+
+  #item-2:checked ~ .player #test {
+    transform: translateY(-150px);
+  }
+
+  #item-3:checked ~ .player #test {
+    transform: translateY(-290px);
+  }
+  #item-4:checked ~ .player #test {
+    transform: translateY(-448px);
   }
   #item-1:checked ~ .cards #projet-4,
   #item-2:checked ~ .cards #projet-1,
@@ -234,10 +245,10 @@ label > img {
     -21px -21px 42px #28283d;
 }
 .backgroundDaymode {
-  background: #fa2a58;
+  background: var(--purpledark);
   box-shadow:
-    inset 50px 50px 100px #e62751,
-    inset -50px -50px 100px #ff2d5f;
+    inset 8px 8px 16px #0a0a0f,
+    inset -8px -8px 16px #28283d;
 }
 .seemoreWhite {
   background: #faf3d3;
