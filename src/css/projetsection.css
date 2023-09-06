@@ -14,12 +14,9 @@
   background-color: var(--yellow);
 }
 .projetsection h2 {
-  font-size: 6vw;
+  font-size: 8vw;
   display: block;
   width: 100%;
-  border-color: var(--rose);
-  border-width: 10px 0 10px 0;
-  border-style: dotted;
 }
 
 input[type="radio"] {
@@ -34,8 +31,8 @@ input[type="radio"] {
 
 .cardProjet {
   position: absolute;
-  width: 680px;
-  height: 300px;
+  width: 80%;
+  height: auto;
   left: 0;
   right: 0;
   margin: auto;
@@ -45,7 +42,7 @@ input[type="radio"] {
 
 .carousselContainer {
   width: 100%;
-  max-width: 850px;
+  /* max-width: 850px; */
   max-height: 600px;
   height: 100%;
   transform-style: preserve-3d;
@@ -111,7 +108,7 @@ label > img {
   width: 250px;
   margin: auto;
   z-index: 2;
-  transform: translateY(-77px);
+  transform: translateY(100px);
 }
 
 .projet-info {
