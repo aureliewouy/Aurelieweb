@@ -120,9 +120,9 @@ label > img {
 }
 .projet-info .title {
   color: var(--cornsilk);
-  font-family: arcade classic;
+  font-family: fake receipt;
   text-align: left;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 20px;
   text-align: center;
 }
@@ -171,14 +171,14 @@ label > img {
 }
 
 #item-2:checked ~ .player #test {
-  transform: translateY(-180px);
+  transform: translateY(-160px);
 }
 
 #item-3:checked ~ .player #test {
-  transform: translateY(-370px);
+  transform: translateY(-330px);
 }
 #item-4:checked ~ .player #test {
-  transform: translateY(-575px);
+  transform: translateY(-505px);
 }
 
 @media (max-width: 900px) {
@@ -202,8 +202,8 @@ label > img {
   }
   .seemore,
   .playicon {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
   }
 
   .projet-info .title {
@@ -216,14 +216,14 @@ label > img {
   }
 
   #item-2:checked ~ .player #test {
-    transform: translateY(-120px);
+    transform: translateY(-110px);
   }
 
   #item-3:checked ~ .player #test {
-    transform: translateY(-240px);
+    transform: translateY(-230px);
   }
   #item-4:checked ~ .player #test {
-    transform: translateY(-374px);
+    transform: translateY(-362px);
   }
   #item-1:checked ~ .cards #projet-4,
   #item-2:checked ~ .cards #projet-1,

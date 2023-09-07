@@ -1,6 +1,6 @@
 import "../css/header.css";
 import "../App.css";
-import AureTop from "../medias/h1-top.svg";
+import AureTop from "../medias/h1-b.svg";
 import AureBottom from "../medias/h1-bottom.svg";
 import { connect } from "react-redux";
 import { toggleTheme } from "../redux/themeaction";

@@ -42,7 +42,7 @@ function App({ isNightMode }) {
 
     slideInRightElements.forEach(function (element) {
       if (isInViewport(element)) {
-        element.classList.add("slide-in-right");
+        element.classList.add("opacity");
       }
     });
     slideInLeftElements.forEach(function (element) {

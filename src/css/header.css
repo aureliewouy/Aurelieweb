@@ -24,8 +24,8 @@ header {
 .clickable a,
 .clickable button,
 .lastpart a {
-  font-family: arcade classic;
-  font-size: 28px;
+  font-family: fake receipt;
+  font-size: 22px;
   text-decoration: none;
   color: var(--cornsilk);
 }
@@ -356,5 +356,11 @@ h1 {
   }
   .aureWeb {
     display: none;
+  }
+  .clickable {
+    justify-content: center;
+  }
+  .headerNav {
+    padding: 14px 25px;
   }
 }
