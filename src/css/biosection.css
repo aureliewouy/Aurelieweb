@@ -23,13 +23,9 @@
   text-align: left;
 }
 ::selection {
-  color: var(
-    --rose
-  ); /* Changez la couleur du texte sélectionné à la couleur de votre choix */
+  color: var(--rose);
 }
-/* .photocontainer{
-    overflow: hidden;
-} */
+
 .photohide {
   position: absolute;
   width: 120%;
@@ -69,7 +65,7 @@
 @media (max-width: 900px) {
   .biophoto {
     transform: rotate(-4deg) translateY(-33px);
-    border-radius: 15px;
+    border-radius: 5px;
     width: 100%;
   }
   .biosection {

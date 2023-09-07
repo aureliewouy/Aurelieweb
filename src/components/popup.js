@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../css/popup.css";
+
 const Popup = ({ imageUrl, onClose, allImg }) => {
   const [currentimg, setCurrentimg] = useState(imageUrl);
   const handleClick = (e) => {
