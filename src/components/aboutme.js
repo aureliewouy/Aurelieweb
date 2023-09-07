@@ -8,6 +8,7 @@ const Aboutme = ({ isNightMode }) => {
         isNightMode ? "night-mode-no-bg" : "day-mode-no-bg"
       }`}
     >
+      <p style={{ fontSize: "6em" }}>À propos de moi</p>
       <p>
         J'ai été formée à Holberton School, ou j'ai passé mes journées à
         résoudre des problèmes informatiques tout en jonglant avec des projets
@@ -16,9 +17,16 @@ const Aboutme = ({ isNightMode }) => {
       <p>
         Mais avant, j'ai décroché un master en Cultures et Métiers du Web à
         l'UPEM me permettant de toucher un peu à tout (vidéo, ux-design,
-        front-end). Là-bas, j'ai créé un site WordPress et même un
-        web-documentaire interactif. On avait prévu de le faire en Corée, mais
-        le COVID a décidé de jouer les trouble-fête ! 🦠😅
+        front-end). Là-bas, j'ai créé un site WordPress et même un{" "}
+        <a
+          href="https://app.racontr.com/projects/2020-ligue-bodo/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          web-documentaire
+        </a>{" "}
+        interactif. On avait prévu de le faire en Corée, mais le COVID a décidé
+        de jouer les trouble-fête ! 🦠😅
       </p>
       <p>
         Lors de mon passage chez TheGreenData en tant que développeuse Full

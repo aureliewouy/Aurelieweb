@@ -13,6 +13,14 @@
   line-height: 1.1;
   text-align: left;
 }
+.aboutme > p > a {
+  color: var(--rose);
+  transition: background 0.3s ease-in;
+  text-decoration: none;
+}
+.aboutme > p > a:hover {
+  background-color: var(--cornsilk);
+}
 @media (max-width: 900px) {
   .aboutme {
     margin-top: 0;

@@ -33,7 +33,7 @@ const ProjetSection = ({ isNightMode }) => {
       <div className="projetsection active">
         <h2
           style={{
-            color: isNightMode ? " white" : " var(--purpledark)",
+            color: isNightMode ? " var(--cornsilk)" : " var(--purpledark)",
           }}
         >
           Mes projets
