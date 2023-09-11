@@ -51,7 +51,7 @@ function CardGrab(props) {
         !hovering && api({ rotateX: 0, rotateY: 0, scale: 1 }),
       onWheel: ({ event, offset: [, y] }) => {
         event.preventDefault();
-        wheelApi.start({ wheelY: y });
+        wheelApi({ wheelY: y });
       },
     },
     { target, eventOptions: { passive: false } },

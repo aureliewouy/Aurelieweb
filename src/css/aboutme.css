@@ -3,23 +3,104 @@
   margin: auto;
   margin-top: 20%;
   margin-bottom: 15%;
+  position: relative;
 }
-.aboutme > p {
+
+.textAboutme {
   font-weight: bold;
   font-size: 30px;
   color: var(--cornsilk);
-  margin-bottom: 80px;
   margin-top: -50px;
   line-height: 1.1;
   text-align: left;
+  margin-bottom: 20%;
 }
-.aboutme > p > a {
+.containerText:nth-of-type(n + 2) {
+  margin-left: 20vw;
+}
+
+.textAboutme > a {
   color: var(--rose);
   transition: background 0.3s ease-in;
   text-decoration: none;
 }
-.aboutme > p > a:hover {
+.textAboutme > a:hover {
   background-color: var(--cornsilk);
+}
+.aboutmeSection {
+  position: relative;
+}
+.colorBorder {
+  border: 1.5px solid #444a52 !important;
+  position: absolute;
+  right: calc(50% + 318px - 3px);
+  height: 100%;
+  top: 10em;
+}
+
+.loading {
+  width: 15px;
+  height: 21px;
+  position: absolute;
+  right: calc(50% + 309px);
+  background-color: var(--purpledark);
+}
+.loading svg {
+  width: 15px;
+  height: 15px;
+  fill: #444a52;
+  vertical-align: middle;
+}
+.logoAboutme {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  position: absolute;
+  right: calc(50% + 272px);
+  transform: translateY(-2px);
+  background: var(--cornsilk);
+}
+.logoAboutme img {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+.holberton {
+  display: flex;
+  position: relative;
+  gap: 10px;
+  margin-left: 20vw;
+  margin-bottom: 20%;
+  /* transform: translateY(-100%) */
+}
+.holberton div {
+  width: 200px;
+  margin: 10px;
+  height: auto;
+  border-radius: 10px;
+  background: var(--purpledark);
+
+  box-shadow:
+    12px 12px 22px #0f0f17,
+    -12px -12px 22px #232335;
+}
+.holberton div:hover {
+  animation: heartbeat 1s 1;
+}
+.holberton div img {
+  width: 100px;
+  margin-top: 20px;
+}
+@keyframes heartbeat {
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    transform: scale(1.05);
+  }
 }
 @media (max-width: 900px) {
   .aboutme {

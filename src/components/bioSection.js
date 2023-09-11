@@ -22,7 +22,7 @@ const BioSection = ({ isNightMode }) => {
         {/* <div className="photohide"></div> */}
         {/* <div className="photohide"></div> */}
       </div>
-      <p className="activeLeft">
+      <p>
         {" "}
         Hey, je suis Aurélie j'ai 28 ans et j'habite à Paris.
         <br />

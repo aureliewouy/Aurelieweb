@@ -4,7 +4,7 @@ import CardGrab from "./card";
 
 function ContactSection() {
   return (
-    <div className="contactsection activeLeft">
+    <div className="contactsection">
       <h2 style={{ zIndex: 2, position: "relative" }}>
         <CardGrab position={10} deg={-18} bottom={-50} />
         <CardGrab position={40} deg={-3} bottom={-10} />

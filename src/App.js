@@ -11,51 +11,55 @@ import { connect } from "react-redux";
 import Aboutme from "./components/aboutme";
 
 function App({ isNightMode }) {
-  // Attacher l'événement scroll après un délai de 2 secondes
   useEffect(() => {
-    const scrollHandler = () => {
+    //Toujours être en haut de la page
+    window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     };
-    window.addEventListener("scroll", scrollHandler);
-    const scrollTimeout = setTimeout(() => {
-      window.removeEventListener("scroll", scrollHandler);
-    }, 3800);
-
-    return () => {
-      clearTimeout(scrollTimeout);
-      window.removeEventListener("scroll", scrollHandler);
-    };
-  }, []);
-
-  function isInViewport(element) {
-    var rect = element.getBoundingClientRect();
-    return (
-      rect.top <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.bottom >= 0
+    // Animation onSroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll(
+      ".hiddenTranslate, .hiddenOpacity, .slideX-left",
     );
-  }
-  // Ajout d'animation au scroll
-  function handleScroll() {
-    var slideInRightElements = document.querySelectorAll(".active");
-    var slideInLeftElements = document.querySelectorAll(".activeLeft");
+    hiddenElements.forEach((el) => observer.observe(el));
+  }, []);
+  // Attacher l'événement scroll après un délai de 2 secondes
+  // useEffect(() => {
+  //   const scrollHandler = () => {
+  //     window.scrollTo(0, 0);
+  //   };
+  //   window.addEventListener("scroll", scrollHandler);
+  //   const scrollTimeout = setTimeout(() => {
+  //     window.removeEventListener("scroll", scrollHandler);
+  //   }, 3800);
 
-    slideInRightElements.forEach(function (element) {
-      if (isInViewport(element)) {
-        element.classList.add("opacity");
-      }
-    });
-    slideInLeftElements.forEach(function (element) {
-      if (isInViewport(element)) {
-        element.classList.add("slide-in-left");
-      }
-    });
-  }
-  window.addEventListener("scroll", handleScroll);
-  handleScroll();
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
+  //   return () => {
+  //     clearTimeout(scrollTimeout);
+  //     window.removeEventListener("scroll", scrollHandler);
+  //   };
+  // }, []);
+  //   const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach((entry) => {
+  //     console.log(entry)
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add('show')
+  //     }
+  //     else {
+  //       entry.target.classList.remove('show')
+  //     }
+  //   })
+  // })
+  // const hiddenElements = document.querySelectorAll('.hidden');
+  // hiddenElements.forEach((el) => observer.observe(el))
+
   return (
     <div className={`App ${isNightMode ? "night-mode" : "day-mode"}`}>
       <div className="nightrevealContainer">
@@ -73,6 +77,7 @@ function App({ isNightMode }) {
       <BioSection />
       <ProjetSection />
       <Aboutme />
+      <Footer />
       <ContactSection />
       <Footer />
     </div>

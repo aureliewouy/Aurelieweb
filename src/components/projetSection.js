@@ -30,7 +30,7 @@ const ProjetSection = ({ isNightMode }) => {
           allImg={allImg}
         />
       )}
-      <div className="projetsection active">
+      <div className="projetsection">
         <h2
           style={{
             color: isNightMode ? " var(--cornsilk)" : " var(--purpledark)",
