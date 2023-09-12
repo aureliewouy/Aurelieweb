@@ -8,12 +8,16 @@
 
 .textAboutme {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 1.8rem;
   color: var(--cornsilk);
-  margin-top: -50px;
+  margin-top: -5vh;
   line-height: 1.1;
   text-align: left;
   margin-bottom: 20%;
+  font-weight: 100;
+}
+.containerText {
+  position: relative;
 }
 .containerText:nth-of-type(n + 2) {
   margin-left: 20vw;
@@ -34,16 +38,39 @@
   border: 1.5px solid #444a52 !important;
   position: absolute;
   right: calc(50% + 318px - 3px);
-  height: 100%;
+  height: 90%;
   top: 10em;
 }
-
+.colorBorderBottom {
+  border-radius: 0 0 0 5px;
+  border-left: 3px solid #444a52 !important;
+  border-bottom: 3px solid #444a52 !important;
+  position: absolute;
+  left: calc(50% - 318px);
+  height: 11%;
+  width: 31.5%;
+  bottom: -10em;
+}
+.colorBorderfinal {
+  border-right: 3px solid #444a52 !important;
+  border-top: 3px solid #444a52 !important;
+  width: 10px;
+  border-radius: 0 5px 0 0;
+  position: absolute;
+  right: -9px;
+  height: 50px;
+  bottom: -50px;
+}
 .loading {
+  z-index: 1;
   width: 15px;
   height: 21px;
   position: absolute;
   right: calc(50% + 309px);
   background-color: var(--purpledark);
+}
+.loadingBlack {
+  background-color: var(--cornsilk);
 }
 .loading svg {
   width: 15px;
@@ -70,8 +97,7 @@
   position: relative;
   gap: 10px;
   margin-left: 20vw;
-  margin-bottom: 20%;
-  /* transform: translateY(-100%) */
+  margin-bottom: 20vh;
 }
 .holberton div {
   width: 200px;
@@ -84,12 +110,41 @@
     12px 12px 22px #0f0f17,
     -12px -12px 22px #232335;
 }
+.holbertonBlack div {
+  background: var(--cornsilk);
+  box-shadow:
+    12px 12px 57px #948f7c,
+    -12px -12px 57px #ffffff;
+}
 .holberton div:hover {
   animation: heartbeat 1s 1;
 }
 .holberton div img {
   width: 100px;
   margin-top: 20px;
+}
+.juggle {
+  width: 150%;
+  margin: auto;
+  transform: translateX(-20%);
+  margin-bottom: 20%;
+  /* position: absolute;
+  right: 0; */
+  /* transform: translate(calc(100% - 72px), 50%); */
+}
+.juggle img {
+  width: 100%;
+}
+.me {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 15%;
+  transform: translateX(0);
+}
+.me img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 1px 9px 15px 5px rgba(0, 0, 0, 0.4);
 }
 @keyframes heartbeat {
   0%,

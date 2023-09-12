@@ -4,10 +4,11 @@ import "../App.css";
 import { ReactComponent as Circle } from "../medias/circle.svg";
 import holberton from "../medias/holberton.png";
 import thegreendata from "../medias/thegreendata.jpeg";
-import me from "../medias/girl.png";
+import me from "../medias/aurelie.jpeg";
 import upem from "../medias/upem.png";
 import js from "../medias/js.png";
 import python from "../medias/python.png";
+import aurecam from "../medias/aurecam.png";
 import c from "../medias/c.png";
 const Aboutme = ({ isNightMode }) => {
   return (
@@ -22,16 +23,14 @@ const Aboutme = ({ isNightMode }) => {
           color: "var(--cornsilk)",
           marginBottom: "15%",
         }}
-        className="hiddenOpacity"
       >
         À propos de moi
       </p>
-      {/* <section className="aboutmeSection"> */}
       <div className="colorBorder"></div>
-      <div className="loading ">
+      <div className={`loading ${!isNightMode && "loadingBlack"}`}>
         <Circle />
       </div>
-      <div className="logoAboutme hiddenOpacity">
+      <div className="logoAboutme">
         <img src={holberton} alt="holberton school" />
       </div>
       <div className="hiddenTranslate containerText">
@@ -41,7 +40,7 @@ const Aboutme = ({ isNightMode }) => {
           passionnants.
         </p>
       </div>
-      <div className="holberton">
+      <div className={`holberton ${!isNightMode && "holbertonBlack"}`}>
         <div className="slideX-left">
           <img src={c} alt="c language" />
           <p>C</p>
@@ -55,12 +54,13 @@ const Aboutme = ({ isNightMode }) => {
           <p>JavaScript</p>
         </div>
       </div>
-      <div className="loading">
+      <div className={`loading ${!isNightMode && "loadingBlack"}`}>
         <Circle />
       </div>
-      <div className="logoAboutme hiddenOpacity">
+      <div className="logoAboutme">
         <img src={upem} alt="holberton school" />
       </div>
+
       <div className="hiddenTranslate containerText">
         <p className="textAboutme">
           Mais avant, j'ai décroché un master en Cultures et Métiers du Web à
@@ -77,11 +77,20 @@ const Aboutme = ({ isNightMode }) => {
           décidé de jouer les trouble-fête ! 🦠😅
         </p>
       </div>
-      <div className="loading">
+      <div className="me juggle hiddenTranslate">
+        <img src={aurecam} alt="all tech" />
+        {/* <Lottie 
+	    options={defaultOptions}
+      speed="0.8"
+        width={"90%"}
+      /> */}
+      </div>
+
+      <div className={`loading ${!isNightMode && "loadingBlack"}`}>
         <Circle />
       </div>
-      <div className="logoAboutme hiddenOpacity">
-        <img src={thegreendata} alt="holberton school" />
+      <div className="logoAboutme">
+        <img src={thegreendata} alt="thegreendata logo" />
       </div>
       <div className="hiddenTranslate containerText">
         <p className="textAboutme">
@@ -94,19 +103,26 @@ const Aboutme = ({ isNightMode }) => {
           Azure et les actions de Github.
         </p>
       </div>
-      <div className="loading">
+      <div className="me">
+        <img src={aurecam} alt="me" />
+      </div>
+      <div className={`loading ${!isNightMode && "loadingBlack"}`}>
         <Circle />
       </div>
-      <div className="logoAboutme hiddenOpacity">
+      <div className="logoAboutme">
         <img src={me} alt="holberton school" />
       </div>
+
       <div className="hiddenTranslate containerText">
         <p className="textAboutme ">
           Bienveillante, ouverte d'esprit et tolérante, j'ai une soif
           inextinguible d'apprendre. En dehors de cela, je pratique
           régulièrement le sport pour rester en forme, et je trouve un véritable
-          bonheur dans le monde des jeux vidéo. 🎮🐍
+          bonheur dans le monde des jeux vidéo. 🎮
         </p>
+      </div>
+      <div className="colorBorderBottom">
+        <div className="colorBorderfinal"></div>
       </div>
     </div>
   );

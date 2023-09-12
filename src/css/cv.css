@@ -1,0 +1,30 @@
+.cv-container {
+  margin-bottom: 20%;
+  transform: translateY(-30px);
+}
+
+.cv-container div {
+  display: grid;
+  align-items: center;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: var(--rose);
+  animation: rotate 4s linear infinite;
+}
+.cv-container div p {
+  font-size: 1.8em;
+  color: var(--cornsilk);
+  font-weight: bolder;
+  /* font-family: fake receipt ; */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

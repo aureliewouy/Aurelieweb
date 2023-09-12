@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../css/projetsection.css";
+import "../App.css";
 import tgdplatform from "../medias/platform.gif";
 import coruscant from "../medias/coruscant.gif";
 import axereal from "../medias/axereal.gif";

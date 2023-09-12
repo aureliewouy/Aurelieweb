@@ -19,8 +19,6 @@ const BioSection = ({ isNightMode }) => {
         <div className="photohide"></div>
         <div className="photohide"></div>
         <div className="photohide"></div>
-        {/* <div className="photohide"></div> */}
-        {/* <div className="photohide"></div> */}
       </div>
       <p>
         {" "}

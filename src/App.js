@@ -9,10 +9,12 @@ import Footer from "./components/footer";
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Aboutme from "./components/aboutme";
+import Cv from "./components/cv";
 
 function App({ isNightMode }) {
   useEffect(() => {
     //Toujours être en haut de la page
+    window.scrollTo(0, 0);
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     };
@@ -46,19 +48,6 @@ function App({ isNightMode }) {
   //     window.removeEventListener("scroll", scrollHandler);
   //   };
   // }, []);
-  //   const observer = new IntersectionObserver((entries) => {
-  //   entries.forEach((entry) => {
-  //     console.log(entry)
-  //     if (entry.isIntersecting) {
-  //       entry.target.classList.add('show')
-  //     }
-  //     else {
-  //       entry.target.classList.remove('show')
-  //     }
-  //   })
-  // })
-  // const hiddenElements = document.querySelectorAll('.hidden');
-  // hiddenElements.forEach((el) => observer.observe(el))
 
   return (
     <div className={`App ${isNightMode ? "night-mode" : "day-mode"}`}>
@@ -77,7 +66,7 @@ function App({ isNightMode }) {
       <BioSection />
       <ProjetSection />
       <Aboutme />
-      <Footer />
+      <Cv />
       <ContactSection />
       <Footer />
     </div>
