@@ -10,6 +10,7 @@ import js from "../medias/js.png";
 import python from "../medias/python.png";
 import aurecam from "../medias/aurecam.png";
 import c from "../medias/c.png";
+import Cv from "./cv";
 const Aboutme = ({ isNightMode }) => {
   return (
     <div
@@ -19,9 +20,11 @@ const Aboutme = ({ isNightMode }) => {
     >
       <p
         style={{
-          fontSize: "6em",
+          fontSize: "8vw",
           color: "var(--cornsilk)",
           marginBottom: "15%",
+          textAlign: "center",
+          fontFamily: "Kabel",
         }}
       >
         À propos de moi
@@ -35,9 +38,16 @@ const Aboutme = ({ isNightMode }) => {
       </div>
       <div className="hiddenTranslate containerText">
         <p className="textAboutme" style={{ marginBottom: "10%" }}>
-          J'ai été formée à Holberton School, ou j'ai passé mes journées à
-          résoudre des problèmes informatiques tout en jonglant avec des projets
-          passionnants.
+          J'ai été formée à Holberton School, où j'ai passé mes journées à
+          résoudre des problèmes informatiques avec des{" "}
+          <a
+            href="https://github.com/aureliewouy/AirBnB_clone_v3"
+            target="_blank"
+            rel="noreferrer"
+          >
+            projets passionnants
+          </a>
+          .
         </p>
       </div>
       <div className={`holberton ${!isNightMode && "holbertonBlack"}`}>
@@ -58,7 +68,7 @@ const Aboutme = ({ isNightMode }) => {
         <Circle />
       </div>
       <div className="logoAboutme">
-        <img src={upem} alt="holberton school" />
+        <img src={upem} alt="Upem Gustave Eiffel" />
       </div>
 
       <div className="hiddenTranslate containerText">
@@ -77,13 +87,8 @@ const Aboutme = ({ isNightMode }) => {
           décidé de jouer les trouble-fête ! 🦠😅
         </p>
       </div>
-      <div className="me juggle hiddenTranslate">
+      <div className="me">
         <img src={aurecam} alt="all tech" />
-        {/* <Lottie 
-	    options={defaultOptions}
-      speed="0.8"
-        width={"90%"}
-      /> */}
       </div>
 
       <div className={`loading ${!isNightMode && "loadingBlack"}`}>
@@ -110,7 +115,7 @@ const Aboutme = ({ isNightMode }) => {
         <Circle />
       </div>
       <div className="logoAboutme">
-        <img src={me} alt="holberton school" />
+        <img src={me} alt="about me" />
       </div>
 
       <div className="hiddenTranslate containerText">
@@ -121,8 +126,11 @@ const Aboutme = ({ isNightMode }) => {
           bonheur dans le monde des jeux vidéo. 🎮
         </p>
       </div>
-      <div className="colorBorderBottom">
-        <div className="colorBorderfinal"></div>
+      <div
+        className="glow-on-hover-about"
+        data={isNightMode ? "dark" : "light"}
+      >
+        <Cv />
       </div>
     </div>
   );

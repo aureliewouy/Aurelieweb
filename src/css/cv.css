@@ -1,20 +1,112 @@
+.cv-container-glow {
+  position: absolute;
+  bottom: -7%;
+  left: calc(50% + 20%);
+  /* transform: translateY(-4vw); */
+}
+.glow-on-hover-cv {
+  text-decoration: none;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.glow-on-hover-cv p {
+  color: var(--cornsilk);
+  font-size: 1.3em;
+  font-family: Kabel;
+}
+.glow-on-hover-cv:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(1px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  will-change: transform;
+  animation: glowing 20s linear infinite;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover-cv:active {
+  color: #000;
+}
+
+.glow-on-hover-cv:active:after {
+  background: transparent;
+}
+
+.glow-on-hover-cv:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--purpledark);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.glow-on-hover-cv[data="light"]:after {
+  background: var(--cornsilk);
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 .cv-container {
   margin-bottom: 20%;
-  transform: translateY(-30px);
+  transform: translateY(-10px);
 }
 
 .cv-container div {
   display: grid;
   align-items: center;
   margin: auto;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 100%;
-  background-color: var(--rose);
-  animation: rotate 4s linear infinite;
+  border: 2px solid #444a52;
+  cursor: pointer;
+  /* animation: rotate 4s linear infinite; */
+  box-shadow: 1px 9px 15px 5px rgba(0, 0, 0, 0.4);
 }
 .cv-container div p {
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: var(--cornsilk);
   font-weight: bolder;
   /* font-family: fake receipt ; */

@@ -139,7 +139,6 @@ h1 {
     wait 3s ease-in 1,
     float 5s ease-in-out infinite;
   opacity: 1;
-  /* float 5s ease-in-out infinite ; */
 }
 
 @media (max-width: 900px) {
@@ -264,7 +263,7 @@ h1 {
   left: -2px;
   background-size: 400%;
   z-index: -1;
-  filter: blur(3px);
+  filter: blur(1px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   will-change: transform;
@@ -309,20 +308,6 @@ h1 {
     background-position: 0 0;
   }
 }
-.animate-text {
-  /* opacity: 0; */
-  will-change: transform;
-  animation-name: zoom;
-  animation-duration: 0.7s;
-  animation-iteration-count: 1;
-  /* transform: translateX(-100%);
-    animation: zoom 1s ; */
-  /* transform: scale(0.2); */
-}
-
-/* .animate-heartbeat {
-    animation: heartbeat 1s infinite;
-  } */
 
 @keyframes slideIn {
   to {

@@ -9,7 +9,6 @@ import Footer from "./components/footer";
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Aboutme from "./components/aboutme";
-import Cv from "./components/cv";
 
 function App({ isNightMode }) {
   useEffect(() => {
@@ -62,11 +61,9 @@ function App({ isNightMode }) {
         <HeaderNav />
       </header>
       <Header />
-
       <BioSection />
       <ProjetSection />
       <Aboutme />
-      <Cv />
       <ContactSection />
       <Footer />
     </div>
