@@ -233,9 +233,32 @@
     margin-top: 0;
     margin-bottom: 10em;
   }
-  .aboutme > p {
+  .textAboutme {
     margin: auto;
     margin-top: 0;
     font-size: 18px;
+    margin-bottom: 10vw;
+  }
+  .colorBorder {
+    left: calc(8%);
+    top: 6em;
+  }
+  .glow-on-hover-about {
+    left: calc(10%);
+    margin-bottom: 25vw;
+    height: 21%;
+  }
+  .holberton {
+    flex-direction: column;
+    margin-bottom: 20vw;
+  }
+  .holberton div {
+    width: 170px;
+  }
+  .loading {
+    left: 6%;
+  }
+  .logoAboutme {
+    left: 15%;
   }
 }

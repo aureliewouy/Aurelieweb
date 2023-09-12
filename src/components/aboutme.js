@@ -9,6 +9,7 @@ import upem from "../medias/upem.png";
 import js from "../medias/js.png";
 import python from "../medias/python.png";
 import aurecam from "../medias/aurecam.png";
+import bodo from "../medias/bodo.gif";
 import c from "../medias/c.png";
 import Cv from "./cv";
 const Aboutme = ({ isNightMode }) => {
@@ -88,7 +89,7 @@ const Aboutme = ({ isNightMode }) => {
         </p>
       </div>
       <div className="me">
-        <img src={aurecam} alt="all tech" />
+        <img src={bodo} alt="Ligue bodo projet" />
       </div>
 
       <div className={`loading ${!isNightMode && "loadingBlack"}`}>

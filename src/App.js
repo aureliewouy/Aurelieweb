@@ -32,21 +32,6 @@ function App({ isNightMode }) {
     );
     hiddenElements.forEach((el) => observer.observe(el));
   }, []);
-  // Attacher l'événement scroll après un délai de 2 secondes
-  // useEffect(() => {
-  //   const scrollHandler = () => {
-  //     window.scrollTo(0, 0);
-  //   };
-  //   window.addEventListener("scroll", scrollHandler);
-  //   const scrollTimeout = setTimeout(() => {
-  //     window.removeEventListener("scroll", scrollHandler);
-  //   }, 3800);
-
-  //   return () => {
-  //     clearTimeout(scrollTimeout);
-  //     window.removeEventListener("scroll", scrollHandler);
-  //   };
-  // }, []);
 
   return (
     <div className={`App ${isNightMode ? "night-mode" : "day-mode"}`}>
@@ -61,11 +46,13 @@ function App({ isNightMode }) {
         <HeaderNav />
       </header>
       <Header />
-      <BioSection />
-      <ProjetSection />
-      <Aboutme />
-      <ContactSection />
-      <Footer />
+      <div className="onload">
+        <BioSection />
+        <ProjetSection />
+        <Aboutme />
+        <ContactSection />
+        <Footer />
+      </div>
     </div>
   );
 }

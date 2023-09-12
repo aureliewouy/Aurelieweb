@@ -103,6 +103,9 @@
   background-color: var(--rose);
 }
 @media (max-width: 900px) {
+  .contactsection {
+    margin-top: 70vw;
+  }
   .card,
   .cardBlack {
     width: 150px;

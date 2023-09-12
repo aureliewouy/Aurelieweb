@@ -36,25 +36,25 @@
   will-change: transform;
   transform: rotate(-4deg) translateX(-120%);
   animation-name: slideleft;
-  animation-duration: 4.9s;
+  animation-duration: 2.42s;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.27, 0.31, 0.41, 1.4);
 }
 
 .photohide:nth-of-type(2) {
-  animation-duration: 4.95s;
+  animation-duration: 2.49s;
   top: 10%;
   right: 9%;
 }
 .photohide:nth-of-type(3) {
-  animation-duration: 5s;
+  animation-duration: 2.52s;
   right: 8%;
   top: 49%;
 }
 
 @keyframes slideleft {
   0%,
-  73% {
+  55% {
     transform: translateX(0) rotate(-4deg) translateZ(0);
   }
   100% {

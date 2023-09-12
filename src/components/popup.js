@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../css/popup.css";
+import Next from "../medias/next.png";
+import Back from "../medias/back.png";
 
 const Popup = ({ imageUrl, onClose, allImg }) => {
   const [currentimg, setCurrentimg] = useState(imageUrl);
@@ -31,10 +33,18 @@ const Popup = ({ imageUrl, onClose, allImg }) => {
   return (
     <div className="popup-container" onClick={onClose}>
       <div className="popup-content" onClick={handleClick}>
-        <img src={currentimg} alt="bigger" />
-        <button onClick={onClose}>Fermer</button>
-        <button onClick={handleImg}>Suivant</button>
-        <button onClick={handlePreviousImg}>Précedent</button>
+        <img src={currentimg} className="image" alt="bigger" />
+        <div className="lecteur">
+          <div onClick={handlePreviousImg}>
+            <img src={Back} alt="back" className="playerIcon" />
+          </div>
+
+          <div onClick={handleImg}>
+            {" "}
+            <img src={Next} alt="next" className="playerIcon" />
+          </div>
+        </div>
+        <div onClick={onClose}>Fermer</div>
       </div>
     </div>
   );

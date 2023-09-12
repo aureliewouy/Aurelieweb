@@ -120,3 +120,17 @@
     transform: rotate(360deg);
   }
 }
+@media (max-width: 900px) {
+  .cv-container-glow {
+    left: 50%;
+  }
+  .glow-on-hover-cv {
+    width: 150px;
+  }
+  .glow-on-hover-about:after {
+    width: 114%;
+  }
+  .glow-on-hover-cv p {
+    font-size: 0.9em;
+  }
+}

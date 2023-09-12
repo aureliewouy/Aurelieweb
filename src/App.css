@@ -161,18 +161,34 @@ body::-webkit-scrollbar {
   transition-duration: 0.5s;
   transition-property: transform;
   animation-name: slidein;
-  animation-duration: 4s;
+  animation-duration: 2.5s;
   animation-iteration-count: 1;
 }
 @keyframes slidein {
-  0%,
-  75% {
+  0% {
     transform: translateY(100%);
     opacity: 0;
   }
 
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+.onload {
+  will-change: display;
+  animation-name: appearContent;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+@keyframes appearContent {
+  0%,
+  90% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
     opacity: 1;
   }
 }
