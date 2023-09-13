@@ -1,5 +1,6 @@
 const initialState = {
   isNightMode: true,
+  isFrenchMode:true,
 };
 
 const themeReducer = (state = initialState, action) => {
@@ -9,6 +10,12 @@ const themeReducer = (state = initialState, action) => {
         ...state,
         isNightMode: !state.isNightMode,
       };
+    case "TOGGLE_LANGUAGE":
+      return {
+        ...state,
+        isFrenchMode: !state.isFrenchMode,
+      };
+
     default:
       return state;
   }

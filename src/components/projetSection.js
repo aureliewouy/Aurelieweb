@@ -10,7 +10,7 @@ import { ReactComponent as PlayBlue } from "../medias/play-button-blue.svg";
 import { ReactComponent as Play } from "../medias/play-button.svg";
 import { connect } from "react-redux";
 
-const ProjetSection = ({ isNightMode }) => {
+const ProjetSection = ({ isNightMode, isFrenchMode }) => {
   const [popupImageUrl, setPopupImageUrl] = useState(null);
 
   const handleImageClick = (imageUrl) => {
@@ -37,7 +37,7 @@ const ProjetSection = ({ isNightMode }) => {
             color: isNightMode ? " var(--cornsilk)" : " var(--purpledark)",
           }}
         >
-          Mes projets
+          {isFrenchMode ? "Mes projets" : "My projects"}
         </h2>
         <div className="caroussel">
           <div className="carousselContainer">
@@ -140,6 +140,7 @@ const ProjetSection = ({ isNightMode }) => {
 };
 const mapStateToProps = (state) => ({
   isNightMode: state.isNightMode,
+  isFrenchMode: state.isFrenchMode
 });
 
 export default connect(mapStateToProps)(ProjetSection);
