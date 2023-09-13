@@ -70,7 +70,7 @@ function CardGrab(props) {
         style={{
           transform: "rotate(" + deg + "deg)",
           left: position + "%",
-          bottom: bottom + "px",
+          bottom: bottom + "vw",
           x,
           y,
           zIndex: zIndex ? -2 : 0,

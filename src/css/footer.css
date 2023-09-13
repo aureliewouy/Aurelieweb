@@ -10,6 +10,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  z-index: 10;
 }
 .langues button {
   color: var(--cornsilk);
@@ -80,3 +81,12 @@
   border: 1px solid var(--rose);
   border-radius: 60px 10px; 
 } */
+@media (max-width: 900px) {
+  .langues {
+    left: -8%;
+    bottom: 5vh;
+  }
+  .langues button {
+    font-size: 0.9em;
+  }
+}

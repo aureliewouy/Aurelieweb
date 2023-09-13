@@ -170,7 +170,7 @@ h1 {
   .clickable a,
   .clickable button,
   .lastpart a {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 @keyframes float {

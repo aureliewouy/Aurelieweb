@@ -36,7 +36,6 @@
   cursor: grab;
   overflow: hidden;
   touch-action: none;
-  bottom: -50px;
 }
 .cardBlack div div > p,
 .cardBlack div div > p a {
@@ -102,6 +101,11 @@
   height: 2px;
   background-color: var(--rose);
 }
+/* @media (max-width: 1600px) {
+.cardBlack {
+  bottom: -50px;
+}
+} */
 @media (max-width: 900px) {
   .contactsection {
     margin-top: 70vw;
