@@ -21,7 +21,7 @@
   z-index: 1;
 }
 .containerText:nth-of-type(n + 2) {
-  margin-left: 20vw;
+  margin-left: 15vw;
 }
 
 .textAboutme > a {
@@ -38,9 +38,9 @@
 .colorBorder {
   border: 1.5px solid #444a52 !important;
   position: absolute;
-  right: calc(50% + 318px - 3px);
+  left: 10%;
   height: 90%;
-  top: 10em;
+  top: 13vw;
 }
 .colorBorderBottom {
   border-radius: 0 0 0 5px;
@@ -71,7 +71,7 @@
   cursor: pointer;
   position: absolute;
   bottom: -10em;
-  left: calc(50% - 313px);
+  left: calc(10% + 5px);
   z-index: 0;
   border-radius: 0 0 0 5px;
   display: flex;
@@ -137,9 +137,9 @@
 .loading {
   z-index: 1;
   width: 15px;
-  height: 21px;
+  height: 22px;
   position: absolute;
-  right: calc(50% + 309px);
+  left: calc(10% - 6px);
   background-color: var(--purpledark);
 }
 .loadingBlack {
@@ -157,7 +157,7 @@
   height: 25px;
   border-radius: 100%;
   position: absolute;
-  right: calc(50% + 272px);
+  left: calc(10% + 20px);
   transform: translateY(-2px);
   background: var(--cornsilk);
 }
@@ -170,7 +170,7 @@
   display: flex;
   position: relative;
   gap: 10px;
-  margin-left: 20vw;
+  margin-left: 14vw;
   margin-bottom: 20vh;
 }
 .holberton div {
@@ -239,6 +239,9 @@
     font-size: 18px;
     margin-bottom: 10vw;
   }
+  .containerText:nth-of-type(n + 2) {
+    margin-left: 20vw;
+  }
   .colorBorder {
     left: calc(8%);
     top: 6em;
@@ -251,6 +254,7 @@
   .holberton {
     flex-direction: column;
     margin-bottom: 20vw;
+    margin-left: 20vw;
   }
   .holberton div {
     width: 170px;

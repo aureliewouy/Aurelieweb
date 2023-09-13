@@ -47,7 +47,6 @@ const HeaderNav = ({ isNightMode, isFrenchMode, toggleTheme }) => {
         <div className="lastpart">
           <a href={cv} target="_blank" rel="noreferrer">
             {isFrenchMode ? "TELECHARGER MON CV" : "DOWNLOAD MY CV"}
-           
           </a>
         </div>
       </div>
@@ -56,7 +55,7 @@ const HeaderNav = ({ isNightMode, isFrenchMode, toggleTheme }) => {
 };
 const mapStateToProps = (state) => ({
   isNightMode: state.isNightMode,
-  isFrenchMode: state.isFrenchMode
+  isFrenchMode: state.isFrenchMode,
 });
 
 const mapDispatchToProps = {

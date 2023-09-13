@@ -140,7 +140,7 @@ const ProjetSection = ({ isNightMode, isFrenchMode }) => {
 };
 const mapStateToProps = (state) => ({
   isNightMode: state.isNightMode,
-  isFrenchMode: state.isFrenchMode
+  isFrenchMode: state.isFrenchMode,
 });
 
 export default connect(mapStateToProps)(ProjetSection);

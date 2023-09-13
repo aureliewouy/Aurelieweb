@@ -8,7 +8,7 @@
   left: 0%;
   transform: rotate(-90deg);
   display: flex;
-  gap : 10px;
+  gap: 10px;
   align-items: center;
 }
 .langues button {
@@ -16,11 +16,10 @@
   font-family: fake receipt;
   background-color: transparent;
   border-style: none;
-  cursor:pointer;
+  cursor: pointer;
   font-size: 1.3em;
   padding: 14px;
   position: relative;
-
 }
 .langues button span {
   transition: opacity 1s ease-in 1;
@@ -30,7 +29,7 @@
   height: 100%;
   border: 1px solid var(--rose);
   border-radius: 60px 80px;
-  position: absolute; 
+  position: absolute;
   bottom: 0;
   right: 0;
   /* animation-name: selection;
@@ -43,7 +42,7 @@
   height: 100%;
   border: 1px solid var(--rose);
   border-radius: 20px 70px;
-  position: absolute; 
+  position: absolute;
   bottom: 0;
   right: 0;
   /* animation-name: selection;
@@ -53,7 +52,6 @@
 }
 @keyframes selection {
   0% {
-    
     border-top: 0;
     border-right: 0;
     border-bottom: 0;

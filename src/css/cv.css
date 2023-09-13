@@ -1,7 +1,7 @@
 .cv-container-glow {
   position: absolute;
   bottom: -7%;
-  left: calc(50% + 20%);
+  left: 100%;
   /* transform: translateY(-4vw); */
 }
 .glow-on-hover-cv {

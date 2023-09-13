@@ -1,6 +1,6 @@
 const initialState = {
   isNightMode: true,
-  isFrenchMode:true,
+  isFrenchMode: true,
 };
 
 const themeReducer = (state = initialState, action) => {

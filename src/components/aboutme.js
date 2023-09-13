@@ -12,7 +12,16 @@ import aurecam from "../medias/aurecam.png";
 import bodo from "../medias/bodo.gif";
 import c from "../medias/c.png";
 import Cv from "./cv";
-import { textEnglishCmw, textEnglishHolberton, textEnglishMe, textEnglishTgd, textFrenchCmw, textFrenchHolberton, textFrenchMe, textFrenchTgd } from "./traductionText";
+import {
+  textEnglishCmw,
+  textEnglishHolberton,
+  textEnglishMe,
+  textEnglishTgd,
+  textFrenchCmw,
+  textFrenchHolberton,
+  textFrenchMe,
+  textFrenchTgd,
+} from "./traductionText";
 const Aboutme = ({ isNightMode, isFrenchMode }) => {
   return (
     <div
@@ -29,7 +38,7 @@ const Aboutme = ({ isNightMode, isFrenchMode }) => {
           fontFamily: "Kabel",
         }}
       >
-        {isFrenchMode ? "À propos de moi":"About me"}
+        {isFrenchMode ? "À propos de moi" : "About me"}
       </p>
       <div className="colorBorder"></div>
       <div className={`loading ${!isNightMode && "loadingBlack"}`}>
@@ -39,7 +48,7 @@ const Aboutme = ({ isNightMode, isFrenchMode }) => {
         <img src={holberton} alt="holberton school" />
       </div>
       <div className="hiddenTranslate containerText">
-      {isFrenchMode ? textFrenchHolberton : textEnglishHolberton}
+        {isFrenchMode ? textFrenchHolberton : textEnglishHolberton}
       </div>
       <div className={`holberton ${!isNightMode && "holbertonBlack"}`}>
         <div className="slideX-left">
@@ -102,7 +111,7 @@ const Aboutme = ({ isNightMode, isFrenchMode }) => {
 };
 const mapStateToProps = (state) => ({
   isNightMode: state.isNightMode,
-  isFrenchMode: state.isFrenchMode
+  isFrenchMode: state.isFrenchMode,
 });
 
 export default connect(mapStateToProps)(Aboutme);
