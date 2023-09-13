@@ -109,15 +109,22 @@ h1 {
   background-position: center; /* Centre l'image dans la div */
   background-image: url("../medias/transparent.svg");
 }
+.spanTitle {
+  position: relative;
+}
 .aurelieTop {
-  width: 68vw;
+  width: 101%;
   height: 100%;
-  position: absolute;
+  right: -1%;
+  top: -4%;
+  /* width: 68vw;
+  height: 100%;
   top: -8.6vw;
-  left: 16vw;
-  background-size: contain; /* Redimensionne l'image pour qu'elle couvre toute la div */
-  background-repeat: no-repeat; /* Empêche la répétition de l'image */
-  background-position: center; /* Centre l'image dans la div */
+  left: 16vw; */
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../medias/transparent.svg");
   will-change: transform;
   animation:
@@ -125,14 +132,19 @@ h1 {
     float 5s ease-in-out infinite;
 }
 .aurelieBottom {
-  width: 90.5vw;
+  width: 100%;
+  /* width: 90.5vw; */
   height: 100%;
+  bottom: 5%;
+  left: 0;
+  /* width: 100%;
+  height: 100%;
+  top: -7px;
+  right: -10px; */
   position: absolute;
-  bottom: -1.7vw;
-  left: 5.4vw;
-  background-size: contain; /* Redimensionne l'image pour qu'elle couvre toute la div */
-  background-repeat: no-repeat; /* Empêche la répétition de l'image */
-  background-position: center; /* Centre l'image dans la div */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../medias/transparent.svg");
   will-change: transform;
   animation:
@@ -142,16 +154,16 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  .aurelieTop {
+  /* .aurelieTop {
     width: 59vw;
     top: -7.6vw;
     left: 21vw;
-  }
-  .aurelieBottom {
+  } */
+  /* .aurelieBottom {
     width: 79.5vw;
     bottom: -4.7vw;
     left: 11.4vw;
-  }
+  } */
   .logo {
     width: 45px;
   }

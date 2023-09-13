@@ -28,7 +28,7 @@ body::-webkit-scrollbar {
   animation-name: width;
   animation-duration: 2.5s;
   animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: cubic-bezier(0.73, 0.31, 0.25, 0.97);
   will-change: transform;
 }
 .nightreveal:nth-child(2) {
@@ -37,15 +37,15 @@ body::-webkit-scrollbar {
 }
 .nightreveal:nth-child(3) {
   top: 40vh;
-  animation-duration: 3.1s;
+  animation-duration: 2.9s;
 }
 .nightreveal:nth-child(4) {
   top: 60vh;
-  animation-duration: 3.5s;
+  animation-duration: 3.1s;
 }
 .nightreveal:nth-child(5) {
   top: 80vh;
-  animation-duration: 3.8s;
+  animation-duration: 3.13s;
 }
 .disappeard {
   display: none;
@@ -157,11 +157,11 @@ body::-webkit-scrollbar {
 }
 .slide-in {
   will-change: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.73, 0.31, 0.29, 0.88);
   transition-duration: 0.5s;
   transition-property: transform;
   animation-name: slidein;
-  animation-duration: 2.5s;
+  animation-duration: 1.9s;
   animation-iteration-count: 1;
 }
 @keyframes slidein {
@@ -274,9 +274,8 @@ body::-webkit-scrollbar {
 }
 .hiddenTranslate {
   opacity: 0;
-
   transform: translateX(-2%);
-  transition: all 1s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .slideX-left {
