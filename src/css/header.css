@@ -129,7 +129,7 @@ h1 {
   will-change: transform;
   animation:
     wait 3s ease-in 1,
-    float 5s ease-in-out infinite;
+    float 5s ease-in-out infinite !important;
 }
 .aurelieBottom {
   width: 100%;
@@ -149,7 +149,7 @@ h1 {
   will-change: transform;
   animation:
     wait 3s ease-in 1,
-    float 5s ease-in-out infinite;
+    float 5s ease-in-out infinite !important;
   opacity: 1;
 }
 
@@ -180,7 +180,7 @@ h1 {
   }
 
   50% {
-    transform: translateY(-1%);
+    transform: translateY(-2%);
   }
 }
 @keyframes wait {
