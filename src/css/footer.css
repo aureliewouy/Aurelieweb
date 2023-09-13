@@ -83,7 +83,7 @@
 } */
 @media (max-width: 900px) {
   .langues {
-    left: -8%;
+    left: 0%;
     bottom: 5vh;
   }
   .langues button {

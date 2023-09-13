@@ -2,13 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import "../css/cv.css";
 import cv from "../medias/AurelieCedia.pdf";
+import cvEn from "../medias/AurelieCedia_vie_en.pdf";
 const Cv = ({ isNightMode, isFrenchMode }) => {
   return (
     <div className="cv-container-glow">
       <a
         target="_blank"
         rel="noreferrer"
-        href={cv}
+        href={isFrenchMode ? cv : cvEn}
         className="glow-on-hover-cv"
         data={isNightMode ? "dark" : "light"}
       >

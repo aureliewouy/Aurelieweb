@@ -180,7 +180,7 @@ h1 {
   }
 
   50% {
-    transform: translateY(-2%);
+    transform: translateY(-3%);
   }
 }
 @keyframes wait {

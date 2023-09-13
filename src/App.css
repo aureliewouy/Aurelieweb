@@ -79,7 +79,8 @@ body::-webkit-scrollbar {
 .day-mode a,
 .day-mode p,
 .day-mode-no-bg a,
-.day-mode-no-bg p {
+.day-mode-no-bg p,
+.day-mode-no-bg {
   color: var(--purpledark) !important;
 }
 .night-mode {
