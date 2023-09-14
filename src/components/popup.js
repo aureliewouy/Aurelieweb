@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "../css/popup.css";
 import Next from "../medias/right.svg";
 import Back from "../medias/left.svg";
+import NextPink from "../medias/rightpink.svg";
+import BackPink from "../medias/leftpink.svg";
 import { projectsEnglish, projectsFrench } from "./traductionText";
 import { connect } from "react-redux";
 
-const Popup = ({ imageUrl, onClose, allImg, isFrenchMode }) => {
+const Popup = ({ imageUrl, onClose, allImg, isFrenchMode, isNightMode }) => {
   const [currentimg, setCurrentimg] = useState(imageUrl);
   const handleClick = (e) => {
     e.stopPropagation();
@@ -34,7 +36,11 @@ const Popup = ({ imageUrl, onClose, allImg, isFrenchMode }) => {
 
   return (
     <div className="popup-container" onClick={onClose}>
-      <div className="popup-content" onClick={handleClick}>
+      <div
+        className="popup-content"
+        onClick={handleClick}
+        style={{ backgroundColor: !isNightMode && "var(--cornsilk)" }}
+      >
         <img src={currentimg} className="image" alt="bigger" />
         <div className="lecteur">
           <div className="projectDescription">
@@ -44,12 +50,20 @@ const Popup = ({ imageUrl, onClose, allImg, isFrenchMode }) => {
           </div>
           <div className={"nextback"} style={{}}>
             <div onClick={handlePreviousImg}>
-              <img src={Back} alt="back" className="playerIcon" />
+              <img
+                src={isNightMode ? Back : BackPink}
+                alt="back"
+                className="playerIcon"
+              />
             </div>
 
             <div onClick={handleImg}>
               {" "}
-              <img src={Next} alt="next" className="playerIcon" />
+              <img
+                src={isNightMode ? Next : NextPink}
+                alt="next"
+                className="playerIcon"
+              />
             </div>
 
             {/* <div onClick={onClose}>Fermer</div> */}
@@ -62,6 +76,7 @@ const Popup = ({ imageUrl, onClose, allImg, isFrenchMode }) => {
 
 const mapStateToProps = (state) => ({
   isFrenchMode: state.isFrenchMode,
+  isNightMode: state.isNightMode,
 });
 
 export default connect(mapStateToProps)(Popup);

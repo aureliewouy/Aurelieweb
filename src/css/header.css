@@ -192,11 +192,11 @@ h1 {
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0.5%);
+    transform: translateY(1%);
   }
 
   50% {
-    transform: translateY(-3%);
+    transform: translateY(-4%);
   }
 }
 @keyframes wait {

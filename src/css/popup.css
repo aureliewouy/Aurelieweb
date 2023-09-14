@@ -60,7 +60,7 @@
 }
 .nextback {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .nextback > div {
   cursor: pointer;
