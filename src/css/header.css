@@ -8,18 +8,34 @@ header {
   padding: 20px 50px;
   z-index: 5;
   position: fixed;
-  width: 95vw;
+  width: 100%;
 }
-.headerNav div {
+/* .headerNav div {
   display: flex;
   align-items: center;
   gap: 10px;
-}
+} */
 .clickable {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: center;
   width: 90%;
   justify-content: space-between;
+}
+.clickable div {
+  display: flex;
+  flex-direction: row;
+}
+.links {
+  justify-self: flex-start;
+  /* align-self: end; */
+}
+.clickable button {
+  justify-self: center;
+}
+.lastpart {
+  justify-self: flex-end;
+  /* align-self: end; */
 }
 .clickable a,
 .clickable button,
@@ -347,6 +363,7 @@ h1 {
     transform: scale(1);
   }
 }
+
 @media (max-width: 900px) {
   .clickable div {
     display: none;
@@ -356,8 +373,12 @@ h1 {
   }
   .clickable {
     justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
   }
   .headerNav {
     padding: 14px 25px;
+  }
+  h1 {
+    letter-spacing: -2px;
   }
 }

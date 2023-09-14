@@ -36,18 +36,18 @@
   will-change: transform;
   transform: rotate(-4deg) translateX(-120%);
   animation-name: slideleft;
-  animation-duration: 2.1s;
+  animation-duration: 1.24s;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(0.73, 0.31, 0.29, 0.88);
 }
 
 .photohide:nth-of-type(2) {
-  animation-duration: 2.14s;
+  animation-duration: 1.26s;
   top: 10%;
   right: 9%;
 }
 .photohide:nth-of-type(3) {
-  animation-duration: 2.18s;
+  animation-duration: 1.28s;
   right: 8%;
   top: 49%;
 }

@@ -250,7 +250,7 @@ label > img {
     z-index: 0;
   }
 }
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1300px) {
   .upper-part {
     transform: translateY(0%);
   }

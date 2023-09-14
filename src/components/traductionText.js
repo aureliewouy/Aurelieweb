@@ -98,3 +98,97 @@ export const textEnglishMe = (
     genuine happiness in the world of video games. 🎮"
   </p>
 );
+
+const platformTDGFrench = (
+  <p>
+    <span>La Platform TheGreenData</span>Elle a été développée avec TypeScript,
+    React JS, Python (FastAPI), et MongoDB, permet d'évaluer l'empreinte
+    environnementale de la chaîne alimentaire, de l'usine à la vente. Elle
+    analyse les indicateurs tels que le CO2, le bien-être animal, l'eau et la
+    biodiversité pour chaque aliment, aidant ainsi le directeur RSE à optimiser
+    la chaîne alimentaire de manière durable et éclairée
+  </p>
+);
+const coruscantFrench = (
+  <p>
+    <span>Coruscant</span> développée avec TypeScript, React JS, Python
+    (FastAPI), et MongoDB, permet d'évaluer l'empreinte environnementale de la
+    chaîne alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels
+    que le CO2, le bien-être animal, l'eau et la biodiversité pour chaque
+    aliment, aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de
+    manière durable et éclairée
+  </p>
+);
+const axerealFrench = (
+  <p>
+    <span>Axereal</span> développée avec TypeScript, React JS, Python (FastAPI),
+    et MongoDB, permet d'évaluer l'empreinte environnementale de la chaîne
+    alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels que le
+    CO2, le bien-être animal, l'eau et la biodiversité pour chaque aliment,
+    aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de manière
+    durable et éclairée
+  </p>
+);
+const rockpaperFrench = (
+  <p>
+    <span>Rock paper</span> développée avec TypeScript, React JS, Python
+    (FastAPI), et MongoDB, permet d'évaluer l'empreinte environnementale de la
+    chaîne alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels
+    que le CO2, le bien-être animal, l'eau et la biodiversité pour chaque
+    aliment, aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de
+    manière durable et éclairée
+  </p>
+);
+const platformTDGEnglish = (
+  <p>
+    <span>The TheGreenData Platform</span>It was developed using TypeScript,
+    React JS, Python (FastAPI), and MongoDB. It enables the evaluation of the
+    environmental footprint of the food supply chain, from production in the
+    factory to final sale. It analyzes indicators such as CO2 emissions, animal
+    welfare, water consumption, and biodiversity for each food item, thereby
+    assisting the CSR (Corporate Social Responsibility) director in optimizing
+    the food supply chain in a sustainable and informed manner.
+  </p>
+);
+const coruscantEnglish = (
+  <p>
+    <span>Coruscant</span> développée avec TypeScript, React JS, Python
+    (FastAPI), et MongoDB, permet d'évaluer l'empreinte environnementale de la
+    chaîne alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels
+    que le CO2, le bien-être animal, l'eau et la biodiversité pour chaque
+    aliment, aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de
+    manière durable et éclairée
+  </p>
+);
+const axerealEnglish = (
+  <p>
+    <span>Axereal</span> développée avec TypeScript, React JS, Python (FastAPI),
+    et MongoDB, permet d'évaluer l'empreinte environnementale de la chaîne
+    alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels que le
+    CO2, le bien-être animal, l'eau et la biodiversité pour chaque aliment,
+    aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de manière
+    durable et éclairée
+  </p>
+);
+const rockpaperEnglish = (
+  <p>
+    <span>Rock paper</span> développée avec TypeScript, React JS, Python
+    (FastAPI), et MongoDB, permet d'évaluer l'empreinte environnementale de la
+    chaîne alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels
+    que le CO2, le bien-être animal, l'eau et la biodiversité pour chaque
+    aliment, aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de
+    manière durable et éclairée
+  </p>
+);
+export const projectsFrench = [
+  platformTDGFrench,
+  coruscantFrench,
+  axerealFrench,
+  rockpaperFrench,
+];
+export const projectsEnglish = [
+  platformTDGEnglish,
+  coruscantEnglish,
+  axerealEnglish,
+  rockpaperEnglish,
+];

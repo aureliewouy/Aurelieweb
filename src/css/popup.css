@@ -15,24 +15,66 @@
 
 .popup-content {
   background-color: var(--purpledark);
+  width: 85vw;
+  height: 80%;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
   z-index: 12;
   cursor: initial;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
 }
 .image {
-  width: 100%;
+  width: 80%;
+  border-radius: 5px;
 }
 .lecteur {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 10px;
+  justify-content: space-between;
 }
-.lecteur div {
+/* .lecteur div {
   color: black;
   cursor: pointer;
-}
+} */
 .playerIcon {
   width: 50px;
+}
+.projectDescription {
+  overflow: scroll;
+}
+.projectDescription p {
+  text-align: left;
+  font-size: 1em;
+}
+.projectDescription p span {
+  color: var(--rose);
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: Kabel;
+  margin-bottom: 10px;
+}
+.nextback {
+  display: flex;
+  justify-content: space-around;
+}
+.nextback > div {
+  cursor: pointer;
+  transform: rotate(6deg);
+}
+.nextback > div:last-child {
+  transform: rotate(-6deg);
+}
+@media (max-width: 900px) {
+  .popup-content {
+    flex-direction: column;
+    height: auto;
+  }
+  .image {
+    width: 100%;
+  }
 }

@@ -21,7 +21,7 @@ const HeaderNav = ({ isNightMode, isFrenchMode, toggleTheme }) => {
           isNightMode ? "night-mode-no-bg" : "day-mode-no-bg"
         }`}
       >
-        <div>
+        <div className="links">
           <a
             target="_blank"
             rel="noreferrer"
@@ -29,9 +29,9 @@ const HeaderNav = ({ isNightMode, isFrenchMode, toggleTheme }) => {
             className="cutlink"
             data-content="Github"
           >
-            <span className="cutlink-inner">Github</span>
+            <span className="cutlink-inner">Github </span>
           </a>
-          <p>•</p>
+          <span style={{ margin: "0 5px" }}>•</span>
           <a
             target="_blank"
             rel="noreferrer"
