@@ -111,32 +111,38 @@ const platformTDGFrench = (
 );
 const coruscantFrench = (
   <p>
-    <span>Coruscant</span> développée avec TypeScript, React JS, Python
-    (FastAPI), et MongoDB, permet d'évaluer l'empreinte environnementale de la
-    chaîne alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels
-    que le CO2, le bien-être animal, l'eau et la biodiversité pour chaque
-    aliment, aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de
-    manière durable et éclairée
+    <span>Coruscant</span> C'est un produit, destinée à aider les coopératives
+    agricoles dans la gestion de leur portefeuille d'exploitations. Elle permet
+    une analyse complète, depuis la de production jusqu'à la commercialisation
+    de diverses céréales, en utilisant des données telles que la surface
+    cultivée, les rendements, et compare ces informations à des indicateurs tels
+    que les cours Euronext. La conception de ce site a fait appel à Typescript,
+    React.js, Python et PostgreSQL. Et les graphiques avec Highcharts.
   </p>
 );
 const axerealFrench = (
   <p>
-    <span>Axereal</span> développée avec TypeScript, React JS, Python (FastAPI),
-    et MongoDB, permet d'évaluer l'empreinte environnementale de la chaîne
-    alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels que le
-    CO2, le bien-être animal, l'eau et la biodiversité pour chaque aliment,
-    aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de manière
-    durable et éclairée
+    <span>Axereal</span> C'est un produit de Thegreendata, spécialement adapté à
+    la charte graphique de leur entreprise. J'ai été en charge de la refonte de
+    son design en étroite collaboration avec leur designer. Les mêmes
+    technologies ont été employées pour ce projet, avec une conception basée sur
+    Typescript, React.js, Python et PostgreSQL. De plus, les graphiques ont été
+    créés en utilisant Highcharts.
   </p>
 );
 const rockpaperFrench = (
   <p>
-    <span>Rock paper</span> développée avec TypeScript, React JS, Python
-    (FastAPI), et MongoDB, permet d'évaluer l'empreinte environnementale de la
-    chaîne alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels
-    que le CO2, le bien-être animal, l'eau et la biodiversité pour chaque
-    aliment, aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de
-    manière durable et éclairée
+    <span>Pierre feuille ciseaux</span> Il s'agit d'un petit projet que j'ai
+    réalisé en utilisant TypeScript avec Front-End Mentor. Voici le{" "}
+    <a
+      href="https://wouy-rock-paper-scissors.netlify.app/"
+      rel="noreferrer"
+      target="_blank"
+      style={{ color: "var(--rose)", textDecoration: "none" }}
+    >
+      lien
+    </a>{" "}
+    pour le tester.
   </p>
 );
 const platformTDGEnglish = (
@@ -152,32 +158,38 @@ const platformTDGEnglish = (
 );
 const coruscantEnglish = (
   <p>
-    <span>Coruscant</span> développée avec TypeScript, React JS, Python
-    (FastAPI), et MongoDB, permet d'évaluer l'empreinte environnementale de la
-    chaîne alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels
-    que le CO2, le bien-être animal, l'eau et la biodiversité pour chaque
-    aliment, aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de
-    manière durable et éclairée
+    <span>Coruscant</span> It's a product designed to assist agricultural
+    cooperatives in managing their portfolio of farms. It enables comprehensive
+    analysis from the production phase to the marketing of various cereals,
+    using data such as cultivated area, yields, and compares this information
+    with indicators such as Euronext prices. The development of this website
+    involved the use of Typescript, React.js, Python, and PostgreSQL, along with
+    the incorporation of Highcharts for graphical representation.
   </p>
 );
 const axerealEnglish = (
   <p>
-    <span>Axereal</span> développée avec TypeScript, React JS, Python (FastAPI),
-    et MongoDB, permet d'évaluer l'empreinte environnementale de la chaîne
-    alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels que le
-    CO2, le bien-être animal, l'eau et la biodiversité pour chaque aliment,
-    aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de manière
-    durable et éclairée
+    <span>Axereal</span> It's a product by Thegreendata, customized to align
+    with their company's branding guidelines. I was responsible for the redesign
+    of its user interface in collaboration with their designer. The same
+    technologies were used for this project, including TypeScript, React.js,
+    Python, and PostgreSQL. Additionally, the charts were created using
+    Highcharts.
   </p>
 );
 const rockpaperEnglish = (
   <p>
-    <span>Rock paper</span> développée avec TypeScript, React JS, Python
-    (FastAPI), et MongoDB, permet d'évaluer l'empreinte environnementale de la
-    chaîne alimentaire, de l'usine à la vente. Elle analyse les indicateurs tels
-    que le CO2, le bien-être animal, l'eau et la biodiversité pour chaque
-    aliment, aidant ainsi le directeur RSE à optimiser la chaîne alimentaire de
-    manière durable et éclairée
+    <span>Rock Paper Scissors</span> This is a small project I've created using
+    TypeScript with Front-End Mentor. Here's the link to test{" "}
+    <a
+      style={{ color: "var(--rose)", textDecoration: "none" }}
+      href="https://wouy-rock-paper-scissors.netlify.app/"
+      rel="noreferrer"
+      target="_blank"
+    >
+      it
+    </a>
+    .
   </p>
 );
 export const projectsFrench = [
